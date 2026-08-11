@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nicolás cumple 8 ⚽💚💛</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Pacifico&display=swap');
+*{box-sizing:border-box}
+body{margin:0;background:#f5d329;font-family:'Baloo 2',sans-serif;color:#111}
+.page{min-height:100vh;padding:20px 12px 42px;display:flex;justify-content:center;
+background:linear-gradient(#f5d329 0 15%,#55a92f 15% 100%)}
+.card{width:min(560px,100%);background:#fffdf4;border:6px solid #fff;border-radius:28px;
+box-shadow:0 18px 50px #0003;overflow:hidden;position:relative}
+.top{padding:22px 20px 0;text-align:center}
+.flags{display:flex;justify-content:center;gap:6px;margin-bottom:10px}
+.flag{width:38px;height:42px;clip-path:polygon(0 0,100% 0,50% 100%);background:#4b9d2a;border:2px solid #111}
+.flag:nth-child(even){background:#111}.flag:nth-child(3n){background:#f5d329}
+.kicker{font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:14px}
+.ball{font-size:42px;margin:2px}
+h1{font:54px Pacifico,cursive;margin:0;line-height:1.05}
+.green{color:#4b9d2a}.yellow{color:#dfb914}
+.age{font-size:31px;font-weight:800;margin:4px 0 12px}
+.intro{font-size:20px;line-height:1.25;margin:8px auto 18px;max-width:440px}
+.sticker{display:inline-block;background:#f5d329;border:3px solid #111;border-radius:16px;padding:5px 13px;transform:rotate(-2deg);font-weight:800}
+.divider{border-top:3px dashed #4b9d2a;margin:20px 0}
+.info{font-size:18px;line-height:1.35;text-align:center}
+.info b{font-size:15px;letter-spacing:1px}
+.count-title{text-align:center;font-weight:800;font-size:18px;margin-top:4px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 6px}
+.unit{background:#111;color:white;border-radius:14px;padding:9px 3px;border-bottom:5px solid #4b9d2a}
+.num{display:block;font-size:27px;font-weight:800;line-height:1}.lab{font-size:11px;letter-spacing:.5px}
+.sport{margin:18px 0;background:#55a92f;border:4px solid #111;border-radius:20px;padding:13px;text-align:center;color:white;font-size:20px;font-weight:800}
+.sport small{display:block;font-size:15px;font-weight:600;margin-top:2px}
+.map{display:block;text-decoration:none;background:#111;color:#fff;border:4px solid #f5d329;border-radius:50px;
+padding:12px 18px;text-align:center;font-size:18px;font-weight:800;box-shadow:0 4px 0 #4b9d2a;margin:12px auto;max-width:370px}
+.footer{height:110px;background:#55a92f;position:relative;margin-top:22px;border-top:5px solid white}
+.footer:before{content:"";position:absolute;left:50%;top:0;height:100%;border-left:4px solid #ffffffaa}
+.footer:after{content:"⚽";position:absolute;left:calc(50% - 18px);top:27px;font-size:36px}
+.note{text-align:center;font-size:14px;padding:0 15px 5px}
+</style>
+</head>
+<body>
+<div class="page"><main class="card">
+<section class="top">
+  <div class="flags">
+    <i class="flag"></i><i class="flag"></i><i class="flag"></i><i class="flag"></i><i class="flag"></i><i class="flag"></i><i class="flag"></i>
+  </div>
+  <div class="kicker">⚽ Estás invitado a mi fiesta ⚽</div>
+  <div class="ball">⚽</div>
+  <h1><span class="green">Nicolás</span></h1>
+  <div class="age"><span class="yellow">¡Cumplo 8 años!</span> 🎉</div>
+  <p class="intro">Ven a celebrar conmigo una tarde llena de fútbol, juegos y mucha diversión. 💚💛</p>
+  <div class="sticker">¡Prepárate para jugar!</div>
+
+  <div class="divider"></div>
+
+  <div class="info">
+    <b>📅 SÁBADO 29 DE AGOSTO</b><br>
+    <b>⏰ 3:00 DE LA TARDE</b><br><br>
+    <b>📍 LUGAR</b><br>
+    Cancha Sintética Brasileirao<br>
+    Cra. 46 #76-109, Nte. Centro Histórico<br>
+    Barranquilla, Atlántico
+  </div>
+
+  <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cancha+Sint%C3%A9tica+Brasileirao%2C+Cra.+46+%2376-109%2C+Barranquilla%2C+Atl%C3%A1ntico">📍 VER UBICACIÓN</a>
+
+  <div class="divider"></div>
+
+  <div class="count-title">⏳ ¡Falta muy poquito!</div>
+  <div class="countdown">
+    <div class="unit"><span class="num" id="days">0</span><span class="lab">DÍAS</span></div>
+    <div class="unit"><span class="num" id="hours">0</span><span class="lab">HORAS</span></div>
+    <div class="unit"><span class="num" id="mins">0</span><span class="lab">MIN</span></div>
+    <div class="unit"><span class="num" id="secs">0</span><span class="lab">SEG</span></div>
+  </div>
+
+  <div class="sport">
+    👕 CÓDIGO DE VESTIMENTA: ROPA DEPORTIVA
+    <small>¡Ven cómodo y listo para jugar! ⚽</small>
+  </div>
+
+  <p class="intro" style="font-size:18px">🎁 <b>Regalo normal</b><br>Lo importante es que vengas a celebrar conmigo.</p>
+</section>
+<div class="note">¡Te esperamos para marcar muchos goles y celebrar juntos! 💚💛</div>
+<div class="footer"></div>
+</main></div>
+
+<script>
+const target = new Date("2026-08-29T15:00:00-05:00").getTime();
+function update(){
+  let diff = target - Date.now();
+  if(diff < 0) diff = 0;
+  const d=Math.floor(diff/86400000);
+  const h=Math.floor(diff%86400000/3600000);
+  const m=Math.floor(diff%3600000/60000);
+  const s=Math.floor(diff%60000/1000);
+  document.getElementById("days").textContent=d;
+  document.getElementById("hours").textContent=String(h).padStart(2,"0");
+  document.getElementById("mins").textContent=String(m).padStart(2,"0");
+  document.getElementById("secs").textContent=String(s).padStart(2,"0");
+}
+update(); setInterval(update,1000);
+</script>
+</body>
+</html>
