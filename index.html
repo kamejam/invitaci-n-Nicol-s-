@@ -3,269 +3,407 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nicolás cumple 8 ⚽💚💛</title>
+<meta name="theme-color" content="#ffd21c">
+
+<title>Nicolás Orozco cumple 8 años ⚽🎉</title>
 
 <style>
-* {
-  box-sizing: border-box;
+:root{
+  --amarillo:#ffd21c;
+  --azul:#0754a6;
+  --rojo:#e53935;
+  --verde:#16823a;
+  --verde-claro:#38a852;
+  --crema:#fffdf2;
+  --oscuro:#12304d;
+  --blanco:#fff;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #58ad3b;
-  color: #17351e;
+*{
+  box-sizing:border-box;
 }
 
-.contenedor {
-  min-height: 100vh;
-  padding: 20px 12px 40px;
-  background: linear-gradient(135deg, #f5df2c 0%, #f5df2c 30%, #58ad3b 30%, #58ad3b 70%, #eef5d9 70%);
+html{
+  scroll-behavior:smooth;
 }
 
-.tarjeta {
-  max-width: 620px;
-  margin: auto;
-  background: white;
-  border: 5px solid #17351e;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,.25);
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--oscuro);
+  background:
+    linear-gradient(
+      to bottom,
+      #ffd21c 0 8%,
+      #0754a6 8% 15%,
+      #e53935 15% 22%,
+      #16823a 22% 100%
+    );
+  overflow-x:hidden;
 }
 
-.portada {
-  text-align: center;
-  padding: 30px 20px 25px;
-  background: linear-gradient(#fff35b, #dff05b);
+/* GRAMA */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.12;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 45px,
+      #fff 46px,
+      transparent 47px
+    );
+  z-index:-1;
 }
 
-.etiqueta {
-  display: inline-block;
-  background: #17351e;
-  color: #fff35b;
-  padding: 8px 15px;
-  border-radius: 30px;
-  font-weight: bold;
+/* MENÚ */
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 16px;
+  background:var(--amarillo);
+  box-shadow:0 4px 18px #0005;
+  overflow-x:auto;
 }
 
-h1 {
-  font-size: 44px;
-  margin: 15px 0 8px;
+.logo{
+  font-size:23px;
+  font-weight:900;
+  margin-right:auto;
+  white-space:nowrap;
 }
 
-.subtitulo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #28752f;
+nav a{
+  color:#062b52;
+  text-decoration:none;
+  font-weight:900;
+  padding:9px 11px;
+  border-radius:12px;
+  white-space:nowrap;
 }
 
-.snoopy {
-  width: 210px;
-  max-width: 80%;
-  margin: 15px auto;
-  display: block;
-  border-radius: 20px;
-  border: 4px solid #17351e;
+nav a:hover{
+  background:#fff8;
 }
 
-.contenido {
-  padding: 22px;
+.wrap{
+  width:min(1120px,92%);
+  margin:auto;
 }
 
-.dato {
-  background: #eef8df;
-  border-left: 7px solid #55ad3f;
-  border-radius: 17px;
-  padding: 15px;
-  margin-bottom: 13px;
-  font-size: 18px;
+/* HERO */
+.hero{
+  min-height:650px;
+  display:grid;
+  place-items:center;
+  padding:35px 0;
 }
 
-.dato strong {
-  display: block;
-  color: #397b34;
-  font-size: 14px;
-  margin-bottom: 4px;
+.hero-card{
+  width:100%;
+  background:var(--crema);
+  border:5px solid white;
+  border-radius:34px;
+  overflow:hidden;
+  box-shadow:0 20px 50px #0006;
 }
 
-.cuenta {
-  background: #17351e;
-  color: white;
-  text-align: center;
-  border-radius: 22px;
-  padding: 18px;
-  margin: 20px 0;
+.hero-top{
+  background:
+    radial-gradient(circle at 15% 30%,#fff 0 4px,transparent 5px),
+    radial-gradient(circle at 80% 60%,#fff 0 4px,transparent 5px),
+    linear-gradient(135deg,var(--azul),#0878c9);
+  color:white;
+  padding:35px 20px 25px;
+  text-align:center;
 }
 
-.cuenta h2 {
-  color: #fff35b;
-  margin-top: 0;
+.ball{
+  font-size:70px;
+  animation:flotar 2s infinite ease-in-out;
 }
 
-#contador {
-  font-size: 24px;
-  font-weight: bold;
+@keyframes flotar{
+  0%,100%{transform:translateY(0) rotate(-5deg)}
+  50%{transform:translateY(-12px) rotate(5deg)}
 }
 
-.ropa {
-  background: #fff35b;
-  border: 3px solid #17351e;
-  border-radius: 18px;
-  padding: 16px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 18px;
+.hero-top h1{
+  margin:8px 0;
+  font-size:clamp(38px,7vw,70px);
+  line-height:1;
+  text-shadow:0 5px 0 #04366e;
 }
 
-.boton {
-  display: block;
-  background: #55ad3f;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  padding: 15px;
-  border-radius: 17px;
-  font-size: 18px;
-  font-weight: bold;
+.hero-top p{
+  font-size:clamp(18px,3vw,25px);
+  font-weight:900;
+  margin:12px 0;
 }
 
-.final {
-  text-align: center;
-  padding: 0 20px 25px;
-  font-weight: bold;
-  color: #39733d;
-}
-</style>
-</head>
-
-<body>
-
-<div class="contenedor">
-
-<div class="tarjeta">
-
-<section class="portada">
-
-<div class="etiqueta">
-⚽ FIESTA DE FÚTBOL ⚽
-</div>
-
-<h1>
-¡Nicolás cumple 8!
-</h1>
-
-<div class="subtitulo">
-Snoopy, fútbol, juegos y mucha diversión 💚💛
-</div>
-
-<!-- Snoopy futbolero -->
-<img
-class="snoopy"
-src="https://closeup.de/cdn/shop/files/G495360.jpg?v=1748296673&width=2048"
-alt="Snoopy jugando fútbol">
-
-</section>
-
-<section class="contenido">
-
-<div class="dato">
-<strong>📅 FECHA</strong>
-Sábado 29 de agosto de 2026
-</div>
-
-<div class="dato">
-<strong>🕒 HORA</strong>
-3:00 de la tarde
-</div>
-
-<div class="dato">
-<strong>📍 LUGAR</strong>
-Cancha Sintética Brasileirao<br>
-Cra. 46 #76-109, Nte. Centro Historico,<br>
-Barranquilla, Atlántico
-</div>
-
-<div class="dato">
-<strong>🎁 REGALO</strong>
-Regalo normal
-</div>
-
-<div class="cuenta">
-
-<h2>⏳ ¡Falta poquito!</h2>
-
-<div id="contador">
-Calculando...
-</div>
-
-</div>
-
-<div class="ropa">
-👟 ¡IMPORTANTE! 👟<br>
-LLEVAR ROPA DEPORTIVA
-</div>
-
-<a
-class="boton"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Cancha+Sint%C3%A9tica+Brasileirao%2C+Cra.+46+%2376-109%2C+Barranquilla%2C+Atl%C3%A1ntico">
-
-📍 VER UBICACIÓN
-
-</a>
-
-</section>
-
-<div class="final">
-¡Te esperamos para celebrar los 8 años de Nicolás! 🎉⚽💚💛
-</div>
-
-</div>
-</div>
-
-<script>
-
-const fechaFiesta =
-new Date("2026-08-29T15:00:00-05:00").getTime();
-
-function actualizarContador() {
-
-const ahora = new Date().getTime();
-
-const diferencia = fechaFiesta - ahora;
-
-if (diferencia <= 0) {
-document.getElementById("contador").innerHTML =
-"🎉 ¡YA EMPEZÓ LA FIESTA! 🎉";
-return;
+.snoopy{
+  font-size:95px;
+  margin:5px 0;
 }
 
-const dias =
-Math.floor(diferencia / (1000 * 60 * 60 * 24));
-
-const horas =
-Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-
-const minutos =
-Math.floor((diferencia / (1000 * 60)) % 60);
-
-const segundos =
-Math.floor((diferencia / 1000) % 60);
-
-document.getElementById("contador").innerHTML =
-dias + " días · " +
-horas + " h · " +
-minutos + " min · " +
-segundos + " s";
-
+.hero-text{
+  text-align:center;
+  padding:25px;
 }
 
-actualizarContador();
+.hero-text h2{
+  color:var(--azul);
+  font-size:clamp(25px,5vw,42px);
+  margin:0 0 10px;
+}
 
-setInterval(actualizarContador, 1000);
+.hero-text p{
+  font-size:20px;
+  font-weight:800;
+}
 
-</script>
+/* BOTONES */
+.btn{
+  display:inline-block;
+  border:0;
+  cursor:pointer;
+  text-decoration:none;
+  background:var(--azul);
+  color:white;
+  font-weight:900;
+  padding:14px 22px;
+  border-radius:16px;
+  box-shadow:0 6px 0 #04366e;
+  transition:.15s;
+  margin:8px;
+  font-size:16px;
+}
 
-</body>
-</html>
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn:active{
+  transform:translateY(4px);
+  box-shadow:0 2px 0 #04366e;
+}
+
+/* SECCIONES */
+section{
+  padding:48px 0;
+}
+
+.title{
+  color:white;
+  text-align:center;
+  font-size:clamp(30px,5vw,46px);
+  margin:0 0 28px;
+  text-shadow:0 4px 0 #075b2a;
+}
+
+/* TARJETAS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.card{
+  background:var(--crema);
+  border:4px solid white;
+  border-radius:25px;
+  padding:23px;
+  text-align:center;
+  box-shadow:0 12px 30px #0004;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  transition:.2s;
+}
+
+.icon{
+  font-size:44px;
+}
+
+.card h3{
+  margin:8px 0;
+  color:var(--azul);
+  font-size:23px;
+}
+
+.card strong{
+  font-size:20px;
+}
+
+/* CUENTA REGRESIVA */
+.countdown{
+  background:linear-gradient(135deg,var(--azul),#0b76c9);
+  color:white;
+  border:5px solid var(--amarillo);
+  border-radius:30px;
+  padding:28px;
+  box-shadow:0 15px 35px #0005;
+}
+
+.countdown h3{
+  text-align:center;
+  font-size:25px;
+  margin-top:0;
+}
+
+.timer{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.time{
+  background:var(--crema);
+  color:var(--azul);
+  border-radius:18px;
+  padding:18px 8px;
+  text-align:center;
+}
+
+.time b{
+  display:block;
+  font-size:clamp(32px,7vw,58px);
+  line-height:1;
+}
+
+.time span{
+  font-weight:900;
+  font-size:14px;
+}
+
+/* DOS COLUMNAS */
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.list{
+  display:grid;
+  gap:12px;
+  text-align:left;
+}
+
+.item{
+  background:white;
+  border-radius:15px;
+  padding:15px;
+  font-weight:800;
+  font-size:17px;
+}
+
+/* CANCHA */
+.field{
+  position:relative;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #16823a 0,
+      #16823a 70px,
+      #1d9345 70px,
+      #1d9345 140px
+    );
+  min-height:280px;
+  border-radius:25px;
+  border:5px solid white;
+  overflow:hidden;
+  box-shadow:0 15px 30px #0005;
+}
+
+.field::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:white;
+  transform:translateX(-50%);
+}
+
+.field::after{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  border:4px solid white;
+  border-radius:50%;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.field-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:white;
+  padding:55px 20px;
+  text-shadow:0 3px 5px #000;
+}
+
+.field-content h2{
+  font-size:30px;
+}
+
+/* UBICACIÓN */
+.location{
+  background:var(--crema);
+  border:5px solid white;
+  border-radius:30px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 15px 30px #0004;
+}
+
+.address{
+  font-size:19px;
+  font-weight:800;
+  line-height:1.5;
+}
+
+/* RSVP */
+.rsvp{
+  background:linear-gradient(135deg,var(--azul),#064381);
+  color:white;
+  border-radius:30px;
+  padding:30px;
+  border:5px solid var(--amarillo);
+  box-shadow:0 15px 30px #0005;
+}
+
+form{
+  display:grid;
+  gap:12px;
+  max-width:700px;
+  margin:auto;
+}
+
+input,
+select{
+  width:100%;
+  padding:16px;
+  border:0;
+  border-radius:13px;
+  font-size:16px;
+}
+
+.response{
+  text-align:center;
+  font-weight:900;
+  font-size:19px;
+  min
