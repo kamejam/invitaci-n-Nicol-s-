@@ -1,409 +1,605 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffd21c">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nicolás Orozco cumple 8 años ⚽🎉</title>
+  <title>¡Nicolás cumple 8!</title>
 
-<style>
-:root{
-  --amarillo:#ffd21c;
-  --azul:#0754a6;
-  --rojo:#e53935;
-  --verde:#16823a;
-  --verde-claro:#38a852;
-  --crema:#fffdf2;
-  --oscuro:#12304d;
-  --blanco:#fff;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-*{
-  box-sizing:border-box;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html{
-  scroll-behavior:smooth;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #e8f5e9;
+      color: #17351e;
+      overflow-x: hidden;
+    }
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--oscuro);
-  background:
-    linear-gradient(
-      to bottom,
-      #ffd21c 0 8%,
-      #0754a6 8% 15%,
-      #e53935 15% 22%,
-      #16823a 22% 100%
-    );
-  overflow-x:hidden;
-}
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 35px 20px;
+      overflow: hidden;
 
-/* GRAMA */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.12;
-  background-image:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0,
-      transparent 45px,
-      #fff 46px,
-      transparent 47px
-    );
-  z-index:-1;
-}
+      background:
+        linear-gradient(
+          rgba(0, 128, 55, 0.78),
+          rgba(0, 128, 55, 0.78)
+        ),
+        repeating-linear-gradient(
+          90deg,
+          #2e9b4f 0,
+          #2e9b4f 80px,
+          #258943 80px,
+          #258943 160px
+        );
+    }
 
-/* MENÚ */
-nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 16px;
-  background:var(--amarillo);
-  box-shadow:0 4px 18px #0005;
-  overflow-x:auto;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 70%;
+      border: 5px solid rgba(255,255,255,0.8);
+      border-radius: 30px;
+    }
 
-.logo{
-  font-size:23px;
-  font-weight:900;
-  margin-right:auto;
-  white-space:nowrap;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      color: white;
+    }
 
-nav a{
-  color:#062b52;
-  text-decoration:none;
-  font-weight:900;
-  padding:9px 11px;
-  border-radius:12px;
-  white-space:nowrap;
-}
+    .football {
+      font-size: 75px;
+      animation: bounce 2s infinite;
+      margin-bottom: 10px;
+    }
 
-nav a:hover{
-  background:#fff8;
-}
+    @keyframes bounce {
+      0%,100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-15px) rotate(8deg); }
+    }
 
-.wrap{
-  width:min(1120px,92%);
-  margin:auto;
-}
+    .small-title {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
 
-/* HERO */
-.hero{
-  min-height:650px;
-  display:grid;
-  place-items:center;
-  padding:35px 0;
-}
+    h1 {
+      font-size: clamp(48px, 10vw, 100px);
+      line-height: .95;
+      margin: 15px 0;
+      text-shadow: 5px 5px 0 rgba(0,0,0,.2);
+    }
 
-.hero-card{
-  width:100%;
-  background:var(--crema);
-  border:5px solid white;
-  border-radius:34px;
-  overflow:hidden;
-  box-shadow:0 20px 50px #0006;
-}
+    .name {
+      color: #ffd526;
+    }
 
-.hero-top{
-  background:
-    radial-gradient(circle at 15% 30%,#fff 0 4px,transparent 5px),
-    radial-gradient(circle at 80% 60%,#fff 0 4px,transparent 5px),
-    linear-gradient(135deg,var(--azul),#0878c9);
-  color:white;
-  padding:35px 20px 25px;
-  text-align:center;
-}
+    .age {
+      display: inline-block;
+      background: #ce1126;
+      border: 6px solid white;
+      border-radius: 50%;
+      width: 105px;
+      height: 105px;
+      line-height: 93px;
+      font-size: 55px;
+      font-weight: 900;
+      margin: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
 
-.ball{
-  font-size:70px;
-  animation:flotar 2s infinite ease-in-out;
-}
+    .hero p {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px auto;
+      max-width: 650px;
+    }
 
-@keyframes flotar{
-  0%,100%{transform:translateY(0) rotate(-5deg)}
-  50%{transform:translateY(-12px) rotate(5deg)}
-}
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 16px 28px;
+      background: #ffd526;
+      color: #17351e;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 900;
+      box-shadow: 0 7px 0 #b88f00;
+      transition: .2s;
+    }
 
-.hero-top h1{
-  margin:8px 0;
-  font-size:clamp(38px,7vw,70px);
-  line-height:1;
-  text-shadow:0 5px 0 #04366e;
-}
+    .button:hover {
+      transform: translateY(4px);
+      box-shadow: 0 3px 0 #b88f00;
+    }
 
-.hero-top p{
-  font-size:clamp(18px,3vw,25px);
-  font-weight:900;
-  margin:12px 0;
-}
+    /* SECTIONS */
+    section {
+      padding: 70px 20px;
+    }
 
-.snoopy{
-  font-size:95px;
-  margin:5px 0;
-}
+    .container {
+      max-width: 1050px;
+      margin: auto;
+    }
 
-.hero-text{
-  text-align:center;
-  padding:25px;
-}
+    .section-title {
+      text-align: center;
+      font-size: clamp(32px, 6vw, 55px);
+      margin-bottom: 35px;
+      color: #007f3f;
+    }
 
-.hero-text h2{
-  color:var(--azul);
-  font-size:clamp(25px,5vw,42px);
-  margin:0 0 10px;
-}
+    .intro {
+      background: white;
+      text-align: center;
+    }
 
-.hero-text p{
-  font-size:20px;
-  font-weight:800;
-}
+    .intro-text {
+      max-width: 750px;
+      margin: auto;
+      font-size: 20px;
+      line-height: 1.7;
+    }
 
-/* BOTONES */
-.btn{
-  display:inline-block;
-  border:0;
-  cursor:pointer;
-  text-decoration:none;
-  background:var(--azul);
-  color:white;
-  font-weight:900;
-  padding:14px 22px;
-  border-radius:16px;
-  box-shadow:0 6px 0 #04366e;
-  transition:.15s;
-  margin:8px;
-  font-size:16px;
-}
+    /* SNOOPY */
+    .snoopy-card {
+      margin: 45px auto 0;
+      max-width: 700px;
+      background: linear-gradient(135deg, #ffffff, #fff9d8);
+      border-radius: 30px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+      border: 5px solid #ffd526;
+    }
 
-.btn:hover{
-  transform:translateY(-2px);
-}
+    .snoopy {
+      font-size: 110px;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
 
-.btn:active{
-  transform:translateY(4px);
-  box-shadow:0 2px 0 #04366e;
-}
+    .snoopy-card h3 {
+      font-size: 30px;
+      color: #ce1126;
+      margin-bottom: 10px;
+    }
 
-/* SECCIONES */
-section{
-  padding:48px 0;
-}
+    .snoopy-card p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
 
-.title{
-  color:white;
-  text-align:center;
-  font-size:clamp(30px,5vw,46px);
-  margin:0 0 28px;
-  text-shadow:0 4px 0 #075b2a;
-}
+    /* INFO */
+    .info {
+      background: #f5f5f5;
+    }
 
-/* TARJETAS */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
 
-.card{
-  background:var(--crema);
-  border:4px solid white;
-  border-radius:25px;
-  padding:23px;
-  text-align:center;
-  box-shadow:0 12px 30px #0004;
-}
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,.1);
+      border-top: 8px solid #007f3f;
+    }
 
-.card:hover{
-  transform:translateY(-4px);
-  transition:.2s;
-}
+    .card:nth-child(2) {
+      border-top-color: #ffd526;
+    }
 
-.icon{
-  font-size:44px;
-}
+    .card:nth-child(3) {
+      border-top-color: #ce1126;
+    }
 
-.card h3{
-  margin:8px 0;
-  color:var(--azul);
-  font-size:23px;
-}
+    .icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
 
-.card strong{
-  font-size:20px;
-}
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
 
-/* CUENTA REGRESIVA */
-.countdown{
-  background:linear-gradient(135deg,var(--azul),#0b76c9);
-  color:white;
-  border:5px solid var(--amarillo);
-  border-radius:30px;
-  padding:28px;
-  box-shadow:0 15px 35px #0005;
-}
+    .card p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
 
-.countdown h3{
-  text-align:center;
-  font-size:25px;
-  margin-top:0;
-}
+    /* FOOTBALL FIELD */
+    .field-section {
+      background: #007f3f;
+      color: white;
+    }
 
-.timer{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-}
+    .field-section .section-title {
+      color: white;
+    }
 
-.time{
-  background:var(--crema);
-  color:var(--azul);
-  border-radius:18px;
-  padding:18px 8px;
-  text-align:center;
-}
+    .field {
+      position: relative;
+      max-width: 900px;
+      height: 430px;
+      margin: auto;
+      border: 5px solid white;
+      border-radius: 20px;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #2e9b4f 0,
+          #2e9b4f 90px,
+          #258943 90px,
+          #258943 180px
+        );
+      overflow: hidden;
+    }
 
-.time b{
-  display:block;
-  font-size:clamp(32px,7vw,58px);
-  line-height:1;
-}
+    .field::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: white;
+      transform: translateX(-50%);
+    }
 
-.time span{
-  font-weight:900;
-  font-size:14px;
-}
+    .center-circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 130px;
+      height: 130px;
+      border: 4px solid white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-/* DOS COLUMNAS */
-.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
+    .field-ball {
+      position: absolute;
+      font-size: 65px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: roll 5s infinite linear;
+    }
 
-.list{
-  display:grid;
-  gap:12px;
-  text-align:left;
-}
+    @keyframes roll {
+      from {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
 
-.item{
-  background:white;
-  border-radius:15px;
-  padding:15px;
-  font-weight:800;
-  font-size:17px;
-}
+    /* INVITATION */
+    .invite {
+      background:
+        linear-gradient(
+          135deg,
+          #fff7c7,
+          #ffffff
+        );
+      text-align: center;
+    }
 
-/* CANCHA */
-.field{
-  position:relative;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      #16823a 0,
-      #16823a 70px,
-      #1d9345 70px,
-      #1d9345 140px
-    );
-  min-height:280px;
-  border-radius:25px;
-  border:5px solid white;
-  overflow:hidden;
-  box-shadow:0 15px 30px #0005;
-}
+    .invite-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 30px;
+      padding: 40px 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+      border: 4px solid #007f3f;
+    }
 
-.field::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:0;
-  bottom:0;
-  width:4px;
-  background:white;
-  transform:translateX(-50%);
-}
+    .invite-box h2 {
+      font-size: clamp(30px, 6vw, 50px);
+      color: #ce1126;
+      margin-bottom: 20px;
+    }
 
-.field::after{
-  content:"";
-  position:absolute;
-  width:100px;
-  height:100px;
-  border:4px solid white;
-  border-radius:50%;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-}
+    .invite-box p {
+      font-size: 20px;
+      line-height: 1.7;
+    }
 
-.field-content{
-  position:relative;
-  z-index:2;
-  text-align:center;
-  color:white;
-  padding:55px 20px;
-  text-shadow:0 3px 5px #000;
-}
+    .highlight {
+      font-weight: 900;
+      color: #007f3f;
+    }
 
-.field-content h2{
-  font-size:30px;
-}
+    /* FOOTER */
+    footer {
+      background: #17351e;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
 
-/* UBICACIÓN */
-.location{
-  background:var(--crema);
-  border:5px solid white;
-  border-radius:30px;
-  padding:28px;
-  text-align:center;
-  box-shadow:0 15px 30px #0004;
-}
+    footer strong {
+      color: #ffd526;
+    }
 
-.address{
-  font-size:19px;
-  font-weight:800;
-  line-height:1.5;
-}
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
 
-/* RSVP */
-.rsvp{
-  background:linear-gradient(135deg,var(--azul),#064381);
-  color:white;
-  border-radius:30px;
-  padding:30px;
-  border:5px solid var(--amarillo);
-  box-shadow:0 15px 30px #0005;
-}
+      .hero {
+        min-height: 90vh;
+        padding: 30px 15px;
+      }
 
-form{
-  display:grid;
-  gap:12px;
-  max-width:700px;
-  margin:auto;
-}
+      .football {
+        font-size: 55px;
+      }
 
-input,
-select{
-  width:100%;
-  padding:16px;
-  border:0;
-  border-radius:13px;
-  font-size:16px;
-}
+      .small-title {
+        font-size: 16px;
+      }
 
-.response{
-  text-align:center;
-  font-weight:900;
-  font-size:19px;
-  min
+      .hero p {
+        font-size: 18px;
+      }
+
+      .age {
+        width: 85px;
+        height: 85px;
+        line-height: 73px;
+        font-size: 42px;
+      }
+
+      section {
+        padding: 50px 15px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .field {
+        height: 300px;
+      }
+
+      .center-circle {
+        width: 90px;
+        height: 90px;
+      }
+
+      .field-ball {
+        font-size: 50px;
+      }
+
+      .snoopy {
+        font-size: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="football">⚽</div>
+
+      <div class="small-title">
+        ¡Estás invitado!
+      </div>
+
+      <h1>
+        Nicolás<br>
+        <span class="name">Orozco</span>
+      </h1>
+
+      <div class="age">8</div>
+
+      <p>
+        ¡Vamos a celebrar un cumpleaños
+        lleno de fútbol, diversión y mucha alegría!
+      </p>
+
+      <a href="#invitacion" class="button">
+        ⚽ Ver la invitación ⚽
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- MENSAJE -->
+  <section class="intro">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        ¡Nicolás cumple 8 años!
+      </h2>
+
+      <p class="intro-text">
+        Hay partidos que se juegan para ganar...
+        y otros que se juegan para divertirse.
+        <br><br>
+        Esta vez queremos que estés con nosotros
+        para celebrar los <strong>8 años de Nicolás Orozco</strong>.
+        🥳⚽
+      </p>
+
+
+      <div class="snoopy-card">
+
+        <div class="snoopy">
+          🐶⚽
+        </div>
+
+        <h3>
+          ¡Snoopy también está convocado!
+        </h3>
+
+        <p>
+          Prepárate para una celebración con
+          fútbol, amigos, juegos y mucha diversión.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DATOS -->
+  <section class="info" id="invitacion">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        📋 Los datos del partido
+      </h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">🎂</div>
+          <h3>¿Qué celebramos?</h3>
+          <p>
+            El cumpleaños número
+            <strong>8</strong> de
+            <strong>Nicolás Orozco</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚽</div>
+          <h3>¿Dónde?</h3>
+          <p>
+            En una cancha de fútbol,
+            rodeados de grama,
+            goles y diversión.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🇨🇴</div>
+          <h3>La temática</h3>
+          <p>
+            Fútbol + Snoopy + los
+            colores de Colombia
+            + mucha diversión.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CANCHA -->
+  <section class="field-section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        🏟️ ¡Nos vemos en la cancha!
+      </h2>
+
+      <div class="field">
+
+        <div class="center-circle"></div>
+
+        <div class="field-ball">
+          ⚽
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INVITACIÓN FINAL -->
+  <section class="invite">
+
+    <div class="container">
+
+      <div class="invite-box">
+
+        <h2>
+          ¡No puedes faltar! 🎉
+        </h2>
+
+        <p>
+          Nicolás está preparando un día
+          muy especial y quiere compartirlo contigo.
+          <br><br>
+
+          Ponte tu mejor actitud de futbolista,
+          prepárate para divertirte y
+          ¡ven a celebrar!
+          <br><br>
+
+          <span class="highlight">
+            ¡Te esperamos para hacer muchos goles
+            y recuerdos inolvidables! ⚽💛💙❤️
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    <p>
+      Hecho con ⚽💛💙❤️ para
+      <strong>Nicolás Orozco</strong>
+    </p>
+
+    <p style="margin-top:10px;">
+      ¡8 años de pura diversión! 🎂
+    </p>
+
+  </footer>
+
+</body>
+</html>
