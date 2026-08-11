@@ -248,4 +248,2234 @@ section{
 }
 
 .section-title{
- 
+  text-align:center;
+  font-size:clamp(32px,6vw,55px);
+  color:white;
+  text-shadow:3px 4px 0 #075b2a;
+  margin-bottom:35px;
+}
+
+/* =========================
+   MENSAJE
+========================= */
+
+.message{
+  background:#fff7cf;
+}
+
+.message .section-title{
+  color:#0754a6;
+  text-shadow:none;
+}
+
+.message-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border:6px solid #ffd21c;
+  border-radius:35px;
+  padding:35px 25px;
+  text-align:center;
+  box-shadow:0 15px 35px #0002;
+}
+
+.message-box p{
+  font-size:21px;
+  line-height:1.7;
+}
+
+.big-ball{
+  font-size:70px;
+  margin-bottom:15px;
+}
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.info{
+  background:#f2f7e9;
+}
+
+.info .section-title{
+  color:#0754a6;
+  text-shadow:none;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border-radius:25px;
+  padding:25px 15px;
+  text-align:center;
+  box-shadow:0 12px 25px #0002;
+  border:4px solid #fff;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-8px) rotate(-1deg);
+}
+
+.card:nth-child(1){
+  border-color:#ffd21c;
+}
+
+.card:nth-child(2){
+  border-color:#0754a6;
+}
+
+.card:nth-child(3){
+  border-color:#e53935;
+}
+
+.card:nth-child(4){
+  border-color:#16833c;
+}
+
+.icon{
+  font-size:48px;
+}
+
+.card h3{
+  margin:12px 0;
+  color:#0754a6;
+  font-size:22px;
+}
+
+.card p{
+  font-size:17px;
+  line-height:1.5;
+}
+
+/* =========================
+   CUENTA
+========================= */
+
+.count-section{
+  background:#0754a6;
+}
+
+.countdown{
+  background:#fffdf1;
+  border:6px solid #ffd21c;
+  border-radius:35px;
+  padding:30px;
+  box-shadow:0 18px 40px #0004;
+}
+
+.count-title{
+  text-align:center;
+  color:#e53935;
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+.timer{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.time{
+  background:#16833c;
+  color:white;
+  border-radius:20px;
+  padding:20px 8px;
+  text-align:center;
+  border:4px solid white;
+}
+
+.time b{
+  display:block;
+  font-size:clamp(30px,6vw,55px);
+}
+
+.time span{
+  font-weight:900;
+  font-size:13px;
+}
+
+/* =========================
+   FIESTA
+========================= */
+
+.party{
+  background:#fff7cf;
+}
+
+.party .section-title{
+  color:#e53935;
+  text-shadow:none;
+}
+
+.party-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.party-card{
+  background:white;
+  border-radius:30px;
+  padding:30px;
+  box-shadow:0 12px 30px #0002;
+}
+
+.party-card h3{
+  color:#0754a6;
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.party-list{
+  display:grid;
+  gap:12px;
+}
+
+.party-item{
+  background:#eef7e9;
+  padding:15px;
+  border-radius:15px;
+  font-size:18px;
+  font-weight:800;
+}
+
+/* =========================
+   CANCHA
+========================= */
+
+.field-section{
+  background:#16833c;
+}
+
+.field{
+  height:430px;
+  position:relative;
+  border:6px solid white;
+  border-radius:25px;
+  overflow:hidden;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #329c4d 0,
+      #329c4d 90px,
+      #278b43 90px,
+      #278b43 180px
+    );
+}
+
+.field::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:4px;
+  background:white;
+  top:50%;
+  left:0;
+}
+
+.center-circle{
+  position:absolute;
+  width:140px;
+  height:140px;
+  border:5px solid white;
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.field-ball{
+  position:absolute;
+  top:50%;
+  left:50%;
+  font-size:70px;
+  animation:pelota 4s infinite ease-in-out;
+}
+
+@keyframes pelota{
+  0%{
+    transform:translate(-180px,-50px) rotate(0);
+  }
+  50%{
+    transform:translate(130px,30px) rotate(360deg);
+  }
+  100%{
+    transform:translate(-180px,-50px) rotate(720deg);
+  }
+}
+
+.field-text{
+  position:absolute;
+  bottom:25px;
+  left:0;
+  right:0;
+  text-align:center;
+  color:white;
+  font-size:28px;
+  font-weight:900;
+  text-shadow:0 3px 5px #000;
+}
+
+/* =========================
+   UBICACIÓN
+========================= */
+
+.location{
+  background:#f4f8ed;
+}
+
+.location-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border-radius:35px;
+  padding:35px 25px;
+  text-align:center;
+  border:6px solid #0754a6;
+  box-shadow:0 15px 35px #0002;
+}
+
+.location-box h3{
+  color:#e53935;
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.address{
+  font-size:20px;
+  line-height:1.6;
+  font-weight:800;
+}
+
+/* =========================
+   DRESS CODE
+========================= */
+
+.dress{
+  background:#ffd21c;
+  text-align:center;
+}
+
+.dress h2{
+  font-size:clamp(35px,7vw,60px);
+  color:#0754a6;
+}
+
+.dress p{
+  font-size:23px;
+  font-weight:900;
+  margin-top:15px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+  background:#e53935;
+  color:white;
+  text-align:center;
+}
+
+.final-box{
+  max-width:800px;
+  margin:auto;
+}
+
+.final h2{
+  font-size:clamp(38px,7vw,65px);
+}
+
+.final p{
+  font-size:21px;
+  line-height:1.6;
+  margin-top:15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#17351e;
+  color:white;
+  text-align:center;
+  padding:35px 15px;
+  font-weight:900;
+}
+
+footer strong{
+  color:#ffd21c;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:800px){
+
+  .hero-content{
+    padding:25px 15px 30px;
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .party-grid{
+    grid-template-columns:1fr;
+  }
+
+  .timer{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .field{
+    height:300px;
+  }
+
+}
+
+@media(max-width:500px){
+
+  section{
+    padding:50px 14px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    min-height:100vh;
+  }
+
+  .hero::before{
+    width:94%;
+    height:90%;
+  }
+
+  .doghouse{
+    transform:scale(.8);
+  }
+
+  .timer{
+    gap:8px;
+  }
+
+  .time{
+    padding:15px 5px;
+  }
+
+  .time b{
+    font-size:32px;
+  }
+
+  .field-ball{
+    font-size:50px;
+  }
+
+}
+
+/* animación de aparición */
+.card,
+.message-box,
+.party-card,
+.location-box{
+  animation:entrada .8s ease both;
+}
+
+@keyframes entrada{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CONFETI -->
+<div class="confetti c1"></div>
+<div class="confetti c2"></div>
+<div class="confetti c3"></div>
+<div class="confetti c4"></div>
+<div class="confetti c5"></div>
+<div class="confetti c6"></div>
+<div class="confetti c7"></div>
+<div class="confetti c8"></div>
+
+
+<!-- PORTADA -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="ball">⚽</div>
+
+<div class="small-title">
+¡Estás invitado!
+</div>
+
+<div class="doghouse">
+
+<div class="snoopy-placeholder">
+🐶⚽
+</div>
+
+</div>
+
+<h1>
+Nicolás
+<br>
+<span class="name">Orozco</span>
+</h1>
+
+<div class="age">
+8
+</div>
+
+<p class="hero-text">
+🎉 ¡Vamos a celebrar un cumpleaños
+lleno de fútbol, juegos y diversión! 🎉
+</p>
+
+<a href="#datos" class="button">
+⚽ Ver invitación
+</a>
+
+</div>
+
+</header>
+
+
+<!-- MENSAJE -->
+
+<section class="message">
+
+<div class="container">
+
+<h2 class="section-title">
+🎂 ¡Nicolás cumple 8 años!
+</h2>
+
+<div class="message-box">
+
+<div class="big-ball">
+⚽
+</div>
+
+<p>
+Hay un cumpleaños muy especial
+que está a punto de comenzar...
+<br><br>
+
+<strong>
+¡Nicolás Orozco cumple 8 años!
+</strong>
+
+<br><br>
+
+Y quiere celebrarlo contigo
+en una tarde llena de fútbol,
+amigos, juegos y mucha diversión.
+<br><br>
+
+🐶⚽
+<strong>
+¡Snoopy también está listo para el partido!
+</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DATOS -->
+
+<section class="info" id="datos">
+
+<div class="container">
+
+<h2 class="section-title">
+📋 La información de la fiesta
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">
+📅
+</div>
+
+<h3>
+Fecha
+</h3>
+
+<p>
+<strong>
+Sábado 29 de agosto de 2026
+</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🕒
+</div>
+
+<h3>
+Hora
+</h3>
+
+<p>
+<strong>
+3:00 de la tarde
+</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🎁
+</div>
+
+<h3>
+Regalo
+</h3>
+
+<p>
+<strong>
+Regalo normal
+</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+👟
+</div>
+
+<h3>
+Importante
+</h3>
+
+<p>
+<strong>
+Llevar ropa deportiva
+</strong>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CUENTA REGRESIVA -->
+
+<section class="count-section">
+
+<div class="container">
+
+<h2 class="section-title">
+⏳ ¡La cuenta regresiva!
+</h2>
+
+<div class="countdown">
+
+<div class="count-title">
+⚽ Cada vez falta menos ⚽
+</div>
+
+<div class="timer">
+
+<div class="time">
+<b id="days">0</b>
+<span>DÍAS</span>
+</div>
+
+<div class="time">
+<b id="hours">0</b>
+<span>HORAS</span>
+</div>
+
+<div class="time">
+<b id="minutes">0</b>
+<span>MINUTOS</span>
+</div>
+
+<div class="time">
+<b id="seconds">0</b>
+<span>SEGUNDOS</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FIESTA -->
+
+<section class="party">
+
+<div class="container">
+
+<h2 class="section-title">
+🎉 ¿Qué nos espera?
+</h2>
+
+<div class="party-grid">
+
+<div class="party-card">
+
+<h3>
+⚽ ¡A jugar!
+</h3>
+
+<div class="party-list">
+
+<div class="party-item">
+⚽ Fútbol y juegos
+</div>
+
+<div class="party-item">
+🏆 Retos y sorpresas
+</div>
+
+<div class="party-item">
+🎵 Música
+</div>
+
+<div class="party-item">
+🎂 Cumpleaños
+</div>
+
+<div class="party-item">
+🎉 Muchísima diversión
+</div>
+
+</div>
+
+</div>
+
+
+<div class="party-card">
+
+<h3>
+👟 Dress code
+</h3>
+
+<p style="font-size:20px;line-height:1.7;font-weight:800">
+
+Ven con ropa deportiva
+y tenis cómodos.
+
+<br><br>
+
+🌱 Vamos a disfrutar de la
+cancha sintética.
+
+<br><br>
+
+⚽ ¡Así que prepárate para correr,
+jugar y divertirte!
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CANCHA -->
+
+<section class="field-section">
+
+<div class="container">
+
+<h2 class="section-title">
+🏟️ ¡Nos vemos en la cancha!
+</h2>
+
+<div class="field">
+
+<div class="center-circle"></div>
+
+<div class="field-ball">
+⚽
+</div>
+
+<div class="field-text">
+¡A JUGAR! ⚽
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- UBICACIÓN -->
+
+<section class="location">
+
+<div class="container">
+
+<h2 class="section-title">
+📍 ¿Dónde será?
+</h2>
+
+<div class="location-box">
+
+<h3>
+🏟️ Cancha Sintética Brasileirao
+</h3>
+
+<p class="address">
+
+Cra. 46 #76-109
+<br>
+
+Nte. Centro Histórico
+<br>
+
+Barranquilla, Atlántico
+
+</p>
+
+<a
+class="button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Cancha%20Sint%C3%A9tica%20Brasileirao%2C%20Cra.%2046%20%2376-109%2C%20Barranquilla%2C%20Atl%C3%A1ntico">
+
+🗺️ Abrir ubicación
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VESTUARIO -->
+
+<section class="dress">
+
+<div class="container">
+
+<h2>
+👟 ¡No olvides tu ropa deportiva!
+</h2>
+
+<p>
+⚽ Tenis cómodos + ropa deportiva
+= ¡listo para el partido!
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+<div class="final-box">
+
+<h2>
+🎉 ¡No puedes faltar!
+</h2>
+
+<p>
+Nicolás quiere celebrar sus 8 años
+contigo.
+
+<br><br>
+
+💛 💙 ❤️ 💚
+
+<br><br>
+
+¡Te esperamos para pasar
+una tarde increíble!
+</p>
+
+<a href="#inicio" class="button">
+⬆️ Volver arriba
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+⚽🐶🎂
+
+<br><br>
+
+<strong>
+Nicolás Orozco · 8 años
+</strong>
+
+<br>
+
+¡Será un golazo de cumpleaños! 🎉
+
+</footer>
+
+
+<script>
+
+/* =========================
+   CUENTA REGRESIVA
+========================= */
+
+const fechaFiesta =
+new Date("2026-08-29T15:00:00-05:00").getTime();
+
+function actualizar(){
+
+const ahora = Date.now();
+
+let diferencia =
+fechaFiesta - ahora;
+
+if(diferencia < 0){
+
+diferencia = 0;
+
+}
+
+const dias =
+Math.floor(
+diferencia / 86400000
+);
+
+const horas =
+Math.floor(
+(diferencia % 86400000) /
+3600000
+);
+
+const minutos =
+Math.floor(
+(diferencia % 3600000) /
+60000
+);
+
+const segundos =
+Math.floor(
+(diferencia % 60000) /
+1000
+);
+
+document.getElementById("days")
+.textContent = dias;
+
+document.getElementById("hours")
+.textContent = horas;
+
+document.getElementById("minutes")
+.textContent = minutos;
+
+document.getElementById("seconds")
+.textContent = segundos;
+
+}
+
+actualizar();
+
+setInterval(
+actualizar,
+1000
+);
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Nicolás cumple 8! ⚽🎂</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  background:#16833c;
+  color:#17351e;
+  overflow-x:hidden;
+}
+
+/* =========================
+   CONFETI
+========================= */
+
+.confetti{
+  position:fixed;
+  width:10px;
+  height:10px;
+  top:-20px;
+  z-index:50;
+  pointer-events:none;
+  animation:caer linear infinite;
+}
+
+.c1{left:5%;background:#ffd21c;animation-duration:6s}
+.c2{left:15%;background:#e53935;animation-duration:8s}
+.c3{left:27%;background:#0754a6;animation-duration:7s}
+.c4{left:39%;background:white;animation-duration:9s}
+.c5{left:53%;background:#ffd21c;animation-duration:6.5s}
+.c6{left:67%;background:#e53935;animation-duration:8.5s}
+.c7{left:78%;background:#0754a6;animation-duration:7.5s}
+.c8{left:91%;background:white;animation-duration:9.5s}
+
+@keyframes caer{
+  0%{
+    transform:translateY(-20px) rotate(0deg);
+  }
+  100%{
+    transform:translateY(110vh) rotate(720deg);
+  }
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:35px 15px;
+  background:
+    linear-gradient(
+      rgba(17,130,60,.78),
+      rgba(17,130,60,.88)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #31994e 0,
+      #31994e 90px,
+      #278c45 90px,
+      #278c45 180px
+    );
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:90%;
+  height:80%;
+  border:5px solid rgba(255,255,255,.8);
+  border-radius:35px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:min(900px,95%);
+  background:#fffdf1;
+  border:6px solid white;
+  border-radius:40px;
+  padding:35px 20px 40px;
+  text-align:center;
+  box-shadow:0 25px 60px #0006;
+}
+
+.ball{
+  font-size:70px;
+  animation:rebote 1.8s infinite ease-in-out;
+}
+
+@keyframes rebote{
+  0%,100%{
+    transform:translateY(0) rotate(0);
+  }
+  50%{
+    transform:translateY(-18px) rotate(12deg);
+  }
+}
+
+/* casita roja */
+
+.doghouse{
+  width:190px;
+  height:115px;
+  background:#e53935;
+  margin:15px auto 5px;
+  position:relative;
+  border:5px solid #17351e;
+  border-radius:12px 12px 5px 5px;
+  animation:flotar 3s infinite ease-in-out;
+}
+
+.doghouse::before{
+  content:"";
+  position:absolute;
+  left:-12px;
+  top:-75px;
+  width:205px;
+  height:100px;
+  background:#d62828;
+  border:5px solid #17351e;
+  transform:skewY(-28deg);
+  border-radius:15px 15px 0 0;
+}
+
+.doghouse::after{
+  content:"";
+  position:absolute;
+  width:55px;
+  height:65px;
+  bottom:-5px;
+  left:65px;
+  background:#8f241e;
+  border:4px solid #17351e;
+  border-radius:50px 50px 0 0;
+}
+
+@keyframes flotar{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
+
+.snoopy-placeholder{
+  position:absolute;
+  top:-55px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:65px;
+  z-index:3;
+}
+
+.small-title{
+  margin-top:25px;
+  color:#0754a6;
+  font-size:20px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+h1{
+  font-size:clamp(45px,9vw,88px);
+  line-height:.9;
+  margin:15px 0;
+  color:#0754a6;
+  text-shadow:4px 4px 0 #ffd21c;
+}
+
+.name{
+  color:#e53935;
+}
+
+.age{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:115px;
+  height:115px;
+  margin:20px auto;
+  background:#ffd21c;
+  border:7px solid #0754a6;
+  border-radius:50%;
+  font-size:65px;
+  font-weight:900;
+  color:#e53935;
+  animation:pulso 1.5s infinite;
+}
+
+@keyframes pulso{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
+
+.hero-text{
+  font-size:21px;
+  line-height:1.5;
+  font-weight:800;
+}
+
+.button{
+  display:inline-block;
+  margin:20px 6px 0;
+  padding:15px 24px;
+  background:#0754a6;
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:900;
+  box-shadow:0 6px 0 #04366e;
+  transition:.2s;
+}
+
+.button:hover{
+  transform:translateY(4px);
+  box-shadow:0 2px 0 #04366e;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+section{
+  padding:70px 18px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  font-size:clamp(32px,6vw,55px);
+  color:white;
+  text-shadow:3px 4px 0 #075b2a;
+  margin-bottom:35px;
+}
+
+/* =========================
+   MENSAJE
+========================= */
+
+.message{
+  background:#fff7cf;
+}
+
+.message .section-title{
+  color:#0754a6;
+  text-shadow:none;
+}
+
+.message-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border:6px solid #ffd21c;
+  border-radius:35px;
+  padding:35px 25px;
+  text-align:center;
+  box-shadow:0 15px 35px #0002;
+}
+
+.message-box p{
+  font-size:21px;
+  line-height:1.7;
+}
+
+.big-ball{
+  font-size:70px;
+  margin-bottom:15px;
+}
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.info{
+  background:#f2f7e9;
+}
+
+.info .section-title{
+  color:#0754a6;
+  text-shadow:none;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border-radius:25px;
+  padding:25px 15px;
+  text-align:center;
+  box-shadow:0 12px 25px #0002;
+  border:4px solid #fff;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-8px) rotate(-1deg);
+}
+
+.card:nth-child(1){
+  border-color:#ffd21c;
+}
+
+.card:nth-child(2){
+  border-color:#0754a6;
+}
+
+.card:nth-child(3){
+  border-color:#e53935;
+}
+
+.card:nth-child(4){
+  border-color:#16833c;
+}
+
+.icon{
+  font-size:48px;
+}
+
+.card h3{
+  margin:12px 0;
+  color:#0754a6;
+  font-size:22px;
+}
+
+.card p{
+  font-size:17px;
+  line-height:1.5;
+}
+
+/* =========================
+   CUENTA
+========================= */
+
+.count-section{
+  background:#0754a6;
+}
+
+.countdown{
+  background:#fffdf1;
+  border:6px solid #ffd21c;
+  border-radius:35px;
+  padding:30px;
+  box-shadow:0 18px 40px #0004;
+}
+
+.count-title{
+  text-align:center;
+  color:#e53935;
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+.timer{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.time{
+  background:#16833c;
+  color:white;
+  border-radius:20px;
+  padding:20px 8px;
+  text-align:center;
+  border:4px solid white;
+}
+
+.time b{
+  display:block;
+  font-size:clamp(30px,6vw,55px);
+}
+
+.time span{
+  font-weight:900;
+  font-size:13px;
+}
+
+/* =========================
+   FIESTA
+========================= */
+
+.party{
+  background:#fff7cf;
+}
+
+.party .section-title{
+  color:#e53935;
+  text-shadow:none;
+}
+
+.party-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.party-card{
+  background:white;
+  border-radius:30px;
+  padding:30px;
+  box-shadow:0 12px 30px #0002;
+}
+
+.party-card h3{
+  color:#0754a6;
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.party-list{
+  display:grid;
+  gap:12px;
+}
+
+.party-item{
+  background:#eef7e9;
+  padding:15px;
+  border-radius:15px;
+  font-size:18px;
+  font-weight:800;
+}
+
+/* =========================
+   CANCHA
+========================= */
+
+.field-section{
+  background:#16833c;
+}
+
+.field{
+  height:430px;
+  position:relative;
+  border:6px solid white;
+  border-radius:25px;
+  overflow:hidden;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #329c4d 0,
+      #329c4d 90px,
+      #278b43 90px,
+      #278b43 180px
+    );
+}
+
+.field::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:4px;
+  background:white;
+  top:50%;
+  left:0;
+}
+
+.center-circle{
+  position:absolute;
+  width:140px;
+  height:140px;
+  border:5px solid white;
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.field-ball{
+  position:absolute;
+  top:50%;
+  left:50%;
+  font-size:70px;
+  animation:pelota 4s infinite ease-in-out;
+}
+
+@keyframes pelota{
+  0%{
+    transform:translate(-180px,-50px) rotate(0);
+  }
+  50%{
+    transform:translate(130px,30px) rotate(360deg);
+  }
+  100%{
+    transform:translate(-180px,-50px) rotate(720deg);
+  }
+}
+
+.field-text{
+  position:absolute;
+  bottom:25px;
+  left:0;
+  right:0;
+  text-align:center;
+  color:white;
+  font-size:28px;
+  font-weight:900;
+  text-shadow:0 3px 5px #000;
+}
+
+/* =========================
+   UBICACIÓN
+========================= */
+
+.location{
+  background:#f4f8ed;
+}
+
+.location-box{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border-radius:35px;
+  padding:35px 25px;
+  text-align:center;
+  border:6px solid #0754a6;
+  box-shadow:0 15px 35px #0002;
+}
+
+.location-box h3{
+  color:#e53935;
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.address{
+  font-size:20px;
+  line-height:1.6;
+  font-weight:800;
+}
+
+/* =========================
+   DRESS CODE
+========================= */
+
+.dress{
+  background:#ffd21c;
+  text-align:center;
+}
+
+.dress h2{
+  font-size:clamp(35px,7vw,60px);
+  color:#0754a6;
+}
+
+.dress p{
+  font-size:23px;
+  font-weight:900;
+  margin-top:15px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+  background:#e53935;
+  color:white;
+  text-align:center;
+}
+
+.final-box{
+  max-width:800px;
+  margin:auto;
+}
+
+.final h2{
+  font-size:clamp(38px,7vw,65px);
+}
+
+.final p{
+  font-size:21px;
+  line-height:1.6;
+  margin-top:15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#17351e;
+  color:white;
+  text-align:center;
+  padding:35px 15px;
+  font-weight:900;
+}
+
+footer strong{
+  color:#ffd21c;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:800px){
+
+  .hero-content{
+    padding:25px 15px 30px;
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .party-grid{
+    grid-template-columns:1fr;
+  }
+
+  .timer{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .field{
+    height:300px;
+  }
+
+}
+
+@media(max-width:500px){
+
+  section{
+    padding:50px 14px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    min-height:100vh;
+  }
+
+  .hero::before{
+    width:94%;
+    height:90%;
+  }
+
+  .doghouse{
+    transform:scale(.8);
+  }
+
+  .timer{
+    gap:8px;
+  }
+
+  .time{
+    padding:15px 5px;
+  }
+
+  .time b{
+    font-size:32px;
+  }
+
+  .field-ball{
+    font-size:50px;
+  }
+
+}
+
+/* animación de aparición */
+.card,
+.message-box,
+.party-card,
+.location-box{
+  animation:entrada .8s ease both;
+}
+
+@keyframes entrada{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CONFETI -->
+<div class="confetti c1"></div>
+<div class="confetti c2"></div>
+<div class="confetti c3"></div>
+<div class="confetti c4"></div>
+<div class="confetti c5"></div>
+<div class="confetti c6"></div>
+<div class="confetti c7"></div>
+<div class="confetti c8"></div>
+
+
+<!-- PORTADA -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="ball">⚽</div>
+
+<div class="small-title">
+¡Estás invitado!
+</div>
+
+<div class="doghouse">
+
+<div class="snoopy-placeholder">
+🐶⚽
+</div>
+
+</div>
+
+<h1>
+Nicolás
+<br>
+<span class="name">Orozco</span>
+</h1>
+
+<div class="age">
+8
+</div>
+
+<p class="hero-text">
+🎉 ¡Vamos a celebrar un cumpleaños
+lleno de fútbol, juegos y diversión! 🎉
+</p>
+
+<a href="#datos" class="button">
+⚽ Ver invitación
+</a>
+
+</div>
+
+</header>
+
+
+<!-- MENSAJE -->
+
+<section class="message">
+
+<div class="container">
+
+<h2 class="section-title">
+🎂 ¡Nicolás cumple 8 años!
+</h2>
+
+<div class="message-box">
+
+<div class="big-ball">
+⚽
+</div>
+
+<p>
+Hay un cumpleaños muy especial
+que está a punto de comenzar...
+<br><br>
+
+<strong>
+¡Nicolás Orozco cumple 8 años!
+</strong>
+
+<br><br>
+
+Y quiere celebrarlo contigo
+en una tarde llena de fútbol,
+amigos, juegos y mucha diversión.
+<br><br>
+
+🐶⚽
+<strong>
+¡Snoopy también está listo para el partido!
+</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DATOS -->
+
+<section class="info" id="datos">
+
+<div class="container">
+
+<h2 class="section-title">
+📋 La información de la fiesta
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">
+📅
+</div>
+
+<h3>
+Fecha
+</h3>
+
+<p>
+<strong>
+Sábado 29 de agosto de 2026
+</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🕒
+</div>
+
+<h3>
+Hora
+</h3>
+
+<p>
+<strong>
+3:00 de la tarde
+</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🎁
+</div>
+
+<h3>
+Regalo
+</h3>
+
+<p>
+<strong>
+Regalo normal
+</strong>
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+👟
+</div>
+
+<h3>
+Importante
+</h3>
+
+<p>
+<strong>
+Llevar ropa deportiva
+</strong>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CUENTA REGRESIVA -->
+
+<section class="count-section">
+
+<div class="container">
+
+<h2 class="section-title">
+⏳ ¡La cuenta regresiva!
+</h2>
+
+<div class="countdown">
+
+<div class="count-title">
+⚽ Cada vez falta menos ⚽
+</div>
+
+<div class="timer">
+
+<div class="time">
+<b id="days">0</b>
+<span>DÍAS</span>
+</div>
+
+<div class="time">
+<b id="hours">0</b>
+<span>HORAS</span>
+</div>
+
+<div class="time">
+<b id="minutes">0</b>
+<span>MINUTOS</span>
+</div>
+
+<div class="time">
+<b id="seconds">0</b>
+<span>SEGUNDOS</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FIESTA -->
+
+<section class="party">
+
+<div class="container">
+
+<h2 class="section-title">
+🎉 ¿Qué nos espera?
+</h2>
+
+<div class="party-grid">
+
+<div class="party-card">
+
+<h3>
+⚽ ¡A jugar!
+</h3>
+
+<div class="party-list">
+
+<div class="party-item">
+⚽ Fútbol y juegos
+</div>
+
+<div class="party-item">
+🏆 Retos y sorpresas
+</div>
+
+<div class="party-item">
+🎵 Música
+</div>
+
+<div class="party-item">
+🎂 Cumpleaños
+</div>
+
+<div class="party-item">
+🎉 Muchísima diversión
+</div>
+
+</div>
+
+</div>
+
+
+<div class="party-card">
+
+<h3>
+👟 Dress code
+</h3>
+
+<p style="font-size:20px;line-height:1.7;font-weight:800">
+
+Ven con ropa deportiva
+y tenis cómodos.
+
+<br><br>
+
+🌱 Vamos a disfrutar de la
+cancha sintética.
+
+<br><br>
+
+⚽ ¡Así que prepárate para correr,
+jugar y divertirte!
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CANCHA -->
+
+<section class="field-section">
+
+<div class="container">
+
+<h2 class="section-title">
+🏟️ ¡Nos vemos en la cancha!
+</h2>
+
+<div class="field">
+
+<div class="center-circle"></div>
+
+<div class="field-ball">
+⚽
+</div>
+
+<div class="field-text">
+¡A JUGAR! ⚽
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- UBICACIÓN -->
+
+<section class="location">
+
+<div class="container">
+
+<h2 class="section-title">
+📍 ¿Dónde será?
+</h2>
+
+<div class="location-box">
+
+<h3>
+🏟️ Cancha Sintética Brasileirao
+</h3>
+
+<p class="address">
+
+Cra. 46 #76-109
+<br>
+
+Nte. Centro Histórico
+<br>
+
+Barranquilla, Atlántico
+
+</p>
+
+<a
+class="button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Cancha%20Sint%C3%A9tica%20Brasileirao%2C%20Cra.%2046%20%2376-109%2C%20Barranquilla%2C%20Atl%C3%A1ntico">
+
+🗺️ Abrir ubicación
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VESTUARIO -->
+
+<section class="dress">
+
+<div class="container">
+
+<h2>
+👟 ¡No olvides tu ropa deportiva!
+</h2>
+
+<p>
+⚽ Tenis cómodos + ropa deportiva
+= ¡listo para el partido!
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+<div class="final-box">
+
+<h2>
+🎉 ¡No puedes faltar!
+</h2>
+
+<p>
+Nicolás quiere celebrar sus 8 años
+contigo.
+
+<br><br>
+
+💛 💙 ❤️ 💚
+
+<br><br>
+
+¡Te esperamos para pasar
+una tarde increíble!
+</p>
+
+<a href="#inicio" class="button">
+⬆️ Volver arriba
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+⚽🐶🎂
+
+<br><br>
+
+<strong>
+Nicolás Orozco · 8 años
+</strong>
+
+<br>
+
+¡Será un golazo de cumpleaños! 🎉
+
+</footer>
+
+
+<script>
+
+/* =========================
+   CUENTA REGRESIVA
+========================= */
+
+const fechaFiesta =
+new Date("2026-08-29T15:00:00-05:00").getTime();
+
+function actualizar(){
+
+const ahora = Date.now();
+
+let diferencia =
+fechaFiesta - ahora;
+
+if(diferencia < 0){
+
+diferencia = 0;
+
+}
+
+const dias =
+Math.floor(
+diferencia / 86400000
+);
+
+const horas =
+Math.floor(
+(diferencia % 86400000) /
+3600000
+);
+
+const minutos =
+Math.floor(
+(diferencia % 3600000) /
+60000
+);
+
+const segundos =
+Math.floor(
+(diferencia % 60000) /
+1000
+);
+
+document.getElementById("days")
+.textContent = dias;
+
+document.getElementById("hours")
+.textContent = horas;
+
+document.getElementById("minutes")
+.textContent = minutos;
+
+document.getElementById("seconds")
+.textContent = segundos;
+
+}
+
+actualizar();
+
+setInterval(
+actualizar,
+1000
+);
+
+</script>
+
+</body>
+</html>
