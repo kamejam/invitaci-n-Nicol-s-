@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicolás cumple 8 ⚽💚💛</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #58ad3b;
+  color: #17351e;
+}
+
+.contenedor {
+  min-height: 100vh;
+  padding: 20px 12px 40px;
+  background: linear-gradient(135deg, #f5df2c 0%, #f5df2c 30%, #58ad3b 30%, #58ad3b 70%, #eef5d9 70%);
+}
+
+.tarjeta {
+  max-width: 620px;
+  margin: auto;
+  background: white;
+  border: 5px solid #17351e;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.portada {
+  text-align: center;
+  padding: 30px 20px 25px;
+  background: linear-gradient(#fff35b, #dff05b);
+}
+
+.etiqueta {
+  display: inline-block;
+  background: #17351e;
+  color: #fff35b;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 44px;
+  margin: 15px 0 8px;
+}
+
+.subtitulo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #28752f;
+}
+
+.snoopy {
+  width: 210px;
+  max-width: 80%;
+  margin: 15px auto;
+  display: block;
+  border-radius: 20px;
+  border: 4px solid #17351e;
+}
+
+.contenido {
+  padding: 22px;
+}
+
+.dato {
+  background: #eef8df;
+  border-left: 7px solid #55ad3f;
+  border-radius: 17px;
+  padding: 15px;
+  margin-bottom: 13px;
+  font-size: 18px;
+}
+
+.dato strong {
+  display: block;
+  color: #397b34;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cuenta {
+  background: #17351e;
+  color: white;
+  text-align: center;
+  border-radius: 22px;
+  padding: 18px;
+  margin: 20px 0;
+}
+
+.cuenta h2 {
+  color: #fff35b;
+  margin-top: 0;
+}
+
+#contador {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ropa {
+  background: #fff35b;
+  border: 3px solid #17351e;
+  border-radius: 18px;
+  padding: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.boton {
+  display: block;
+  background: #55ad3f;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  border-radius: 17px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.final {
+  text-align: center;
+  padding: 0 20px 25px;
+  font-weight: bold;
+  color: #39733d;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<section class="portada">
+
+<div class="etiqueta">
+⚽ FIESTA DE FÚTBOL ⚽
+</div>
+
+<h1>
+¡Nicolás cumple 8!
+</h1>
+
+<div class="subtitulo">
+Snoopy, fútbol, juegos y mucha diversión 💚💛
+</div>
+
+<!-- Snoopy futbolero -->
+<img
+class="snoopy"
+src="https://closeup.de/cdn/shop/files/G495360.jpg?v=1748296673&width=2048"
+alt="Snoopy jugando fútbol">
+
+</section>
+
+<section class="contenido">
+
+<div class="dato">
+<strong>📅 FECHA</strong>
+Sábado 29 de agosto de 2026
+</div>
+
+<div class="dato">
+<strong>🕒 HORA</strong>
+3:00 de la tarde
+</div>
+
+<div class="dato">
+<strong>📍 LUGAR</strong>
+Cancha Sintética Brasileirao<br>
+Cra. 46 #76-109, Nte. Centro Historico,<br>
+Barranquilla, Atlántico
+</div>
+
+<div class="dato">
+<strong>🎁 REGALO</strong>
+Regalo normal
+</div>
+
+<div class="cuenta">
+
+<h2>⏳ ¡Falta poquito!</h2>
+
+<div id="contador">
+Calculando...
+</div>
+
+</div>
+
+<div class="ropa">
+👟 ¡IMPORTANTE! 👟<br>
+LLEVAR ROPA DEPORTIVA
+</div>
+
+<a
+class="boton"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Cancha+Sint%C3%A9tica+Brasileirao%2C+Cra.+46+%2376-109%2C+Barranquilla%2C+Atl%C3%A1ntico">
+
+📍 VER UBICACIÓN
+
+</a>
+
+</section>
+
+<div class="final">
+¡Te esperamos para celebrar los 8 años de Nicolás! 🎉⚽💚💛
+</div>
+
+</div>
+</div>
+
+<script>
+
+const fechaFiesta =
+new Date("2026-08-29T15:00:00-05:00").getTime();
+
+function actualizarContador() {
+
+const ahora = new Date().getTime();
+
+const diferencia = fechaFiesta - ahora;
+
+if (diferencia <= 0) {
+document.getElementById("contador").innerHTML =
+"🎉 ¡YA EMPEZÓ LA FIESTA! 🎉";
+return;
+}
+
+const dias =
+Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+const horas =
+Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+
+const minutos =
+Math.floor((diferencia / (1000 * 60)) % 60);
+
+const segundos =
+Math.floor((diferencia / 1000) % 60);
+
+document.getElementById("contador").innerHTML =
+dias + " días · " +
+horas + " h · " +
+minutos + " min · " +
+segundos + " s";
+
+}
+
+actualizarContador();
+
+setInterval(actualizarContador, 1000);
+
+</script>
+
+</body>
+</html>
