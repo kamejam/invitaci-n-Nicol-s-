@@ -1,605 +1,251 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>¡Nicolás cumple 8!</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #e8f5e9;
-      color: #17351e;
-      overflow-x: hidden;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 35px 20px;
-      overflow: hidden;
-
-      background:
-        linear-gradient(
-          rgba(0, 128, 55, 0.78),
-          rgba(0, 128, 55, 0.78)
-        ),
-        repeating-linear-gradient(
-          90deg,
-          #2e9b4f 0,
-          #2e9b4f 80px,
-          #258943 80px,
-          #258943 160px
-        );
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 90%;
-      height: 70%;
-      border: 5px solid rgba(255,255,255,0.8);
-      border-radius: 30px;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 850px;
-      color: white;
-    }
-
-    .football {
-      font-size: 75px;
-      animation: bounce 2s infinite;
-      margin-bottom: 10px;
-    }
-
-    @keyframes bounce {
-      0%,100% { transform: translateY(0) rotate(0); }
-      50% { transform: translateY(-15px) rotate(8deg); }
-    }
-
-    .small-title {
-      font-size: 22px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: clamp(48px, 10vw, 100px);
-      line-height: .95;
-      margin: 15px 0;
-      text-shadow: 5px 5px 0 rgba(0,0,0,.2);
-    }
-
-    .name {
-      color: #ffd526;
-    }
-
-    .age {
-      display: inline-block;
-      background: #ce1126;
-      border: 6px solid white;
-      border-radius: 50%;
-      width: 105px;
-      height: 105px;
-      line-height: 93px;
-      font-size: 55px;
-      font-weight: 900;
-      margin: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,.25);
-    }
-
-    .hero p {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 15px auto;
-      max-width: 650px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 16px 28px;
-      background: #ffd526;
-      color: #17351e;
-      text-decoration: none;
-      border-radius: 50px;
-      font-size: 18px;
-      font-weight: 900;
-      box-shadow: 0 7px 0 #b88f00;
-      transition: .2s;
-    }
-
-    .button:hover {
-      transform: translateY(4px);
-      box-shadow: 0 3px 0 #b88f00;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 70px 20px;
-    }
-
-    .container {
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: clamp(32px, 6vw, 55px);
-      margin-bottom: 35px;
-      color: #007f3f;
-    }
-
-    .intro {
-      background: white;
-      text-align: center;
-    }
-
-    .intro-text {
-      max-width: 750px;
-      margin: auto;
-      font-size: 20px;
-      line-height: 1.7;
-    }
-
-    /* SNOOPY */
-    .snoopy-card {
-      margin: 45px auto 0;
-      max-width: 700px;
-      background: linear-gradient(135deg, #ffffff, #fff9d8);
-      border-radius: 30px;
-      padding: 35px 25px;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,.12);
-      border: 5px solid #ffd526;
-    }
-
-    .snoopy {
-      font-size: 110px;
-      line-height: 1;
-      margin-bottom: 15px;
-    }
-
-    .snoopy-card h3 {
-      font-size: 30px;
-      color: #ce1126;
-      margin-bottom: 10px;
-    }
-
-    .snoopy-card p {
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    /* INFO */
-    .info {
-      background: #f5f5f5;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px 20px;
-      border-radius: 25px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,.1);
-      border-top: 8px solid #007f3f;
-    }
-
-    .card:nth-child(2) {
-      border-top-color: #ffd526;
-    }
-
-    .card:nth-child(3) {
-      border-top-color: #ce1126;
-    }
-
-    .icon {
-      font-size: 50px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    /* FOOTBALL FIELD */
-    .field-section {
-      background: #007f3f;
-      color: white;
-    }
-
-    .field-section .section-title {
-      color: white;
-    }
-
-    .field {
-      position: relative;
-      max-width: 900px;
-      height: 430px;
-      margin: auto;
-      border: 5px solid white;
-      border-radius: 20px;
-      background:
-        repeating-linear-gradient(
-          90deg,
-          #2e9b4f 0,
-          #2e9b4f 90px,
-          #258943 90px,
-          #258943 180px
-        );
-      overflow: hidden;
-    }
-
-    .field::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 0;
-      height: 100%;
-      width: 4px;
-      background: white;
-      transform: translateX(-50%);
-    }
-
-    .center-circle {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 130px;
-      height: 130px;
-      border: 4px solid white;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .field-ball {
-      position: absolute;
-      font-size: 65px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      animation: roll 5s infinite linear;
-    }
-
-    @keyframes roll {
-      from {
-        transform: translate(-50%, -50%) rotate(0);
-      }
-      to {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-
-    /* INVITATION */
-    .invite {
-      background:
-        linear-gradient(
-          135deg,
-          #fff7c7,
-          #ffffff
-        );
-      text-align: center;
-    }
-
-    .invite-box {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      border-radius: 30px;
-      padding: 40px 25px;
-      box-shadow: 0 15px 40px rgba(0,0,0,.12);
-      border: 4px solid #007f3f;
-    }
-
-    .invite-box h2 {
-      font-size: clamp(30px, 6vw, 50px);
-      color: #ce1126;
-      margin-bottom: 20px;
-    }
-
-    .invite-box p {
-      font-size: 20px;
-      line-height: 1.7;
-    }
-
-    .highlight {
-      font-weight: 900;
-      color: #007f3f;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #17351e;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
-
-    footer strong {
-      color: #ffd526;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 700px) {
-
-      .hero {
-        min-height: 90vh;
-        padding: 30px 15px;
-      }
-
-      .football {
-        font-size: 55px;
-      }
-
-      .small-title {
-        font-size: 16px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .age {
-        width: 85px;
-        height: 85px;
-        line-height: 73px;
-        font-size: 42px;
-      }
-
-      section {
-        padding: 50px 15px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .field {
-        height: 300px;
-      }
-
-      .center-circle {
-        width: 90px;
-        height: 90px;
-      }
-
-      .field-ball {
-        font-size: 50px;
-      }
-
-      .snoopy {
-        font-size: 80px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- PORTADA -->
-  <header class="hero">
-
-    <div class="hero-content">
-
-      <div class="football">⚽</div>
-
-      <div class="small-title">
-        ¡Estás invitado!
-      </div>
-
-      <h1>
-        Nicolás<br>
-        <span class="name">Orozco</span>
-      </h1>
-
-      <div class="age">8</div>
-
-      <p>
-        ¡Vamos a celebrar un cumpleaños
-        lleno de fútbol, diversión y mucha alegría!
-      </p>
-
-      <a href="#invitacion" class="button">
-        ⚽ Ver la invitación ⚽
-      </a>
-
-    </div>
-
-  </header>
-
-
-  <!-- MENSAJE -->
-  <section class="intro">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        ¡Nicolás cumple 8 años!
-      </h2>
-
-      <p class="intro-text">
-        Hay partidos que se juegan para ganar...
-        y otros que se juegan para divertirse.
-        <br><br>
-        Esta vez queremos que estés con nosotros
-        para celebrar los <strong>8 años de Nicolás Orozco</strong>.
-        🥳⚽
-      </p>
-
-
-      <div class="snoopy-card">
-
-        <div class="snoopy">
-          🐶⚽
-        </div>
-
-        <h3>
-          ¡Snoopy también está convocado!
-        </h3>
-
-        <p>
-          Prepárate para una celebración con
-          fútbol, amigos, juegos y mucha diversión.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- DATOS -->
-  <section class="info" id="invitacion">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        📋 Los datos del partido
-      </h2>
-
-      <div class="cards">
-
-        <div class="card">
-          <div class="icon">🎂</div>
-          <h3>¿Qué celebramos?</h3>
-          <p>
-            El cumpleaños número
-            <strong>8</strong> de
-            <strong>Nicolás Orozco</strong>.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">⚽</div>
-          <h3>¿Dónde?</h3>
-          <p>
-            En una cancha de fútbol,
-            rodeados de grama,
-            goles y diversión.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🇨🇴</div>
-          <h3>La temática</h3>
-          <p>
-            Fútbol + Snoopy + los
-            colores de Colombia
-            + mucha diversión.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CANCHA -->
-  <section class="field-section">
-
-    <div class="container">
-
-      <h2 class="section-title">
-        🏟️ ¡Nos vemos en la cancha!
-      </h2>
-
-      <div class="field">
-
-        <div class="center-circle"></div>
-
-        <div class="field-ball">
-          ⚽
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- INVITACIÓN FINAL -->
-  <section class="invite">
-
-    <div class="container">
-
-      <div class="invite-box">
-
-        <h2>
-          ¡No puedes faltar! 🎉
-        </h2>
-
-        <p>
-          Nicolás está preparando un día
-          muy especial y quiere compartirlo contigo.
-          <br><br>
-
-          Ponte tu mejor actitud de futbolista,
-          prepárate para divertirte y
-          ¡ven a celebrar!
-          <br><br>
-
-          <span class="highlight">
-            ¡Te esperamos para hacer muchos goles
-            y recuerdos inolvidables! ⚽💛💙❤️
-          </span>
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <footer>
-
-    <p>
-      Hecho con ⚽💛💙❤️ para
-      <strong>Nicolás Orozco</strong>
-    </p>
-
-    <p style="margin-top:10px;">
-      ¡8 años de pura diversión! 🎂
-    </p>
-
-  </footer>
-
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Nicolás cumple 8! ⚽🎂</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  background:#16833c;
+  color:#17351e;
+  overflow-x:hidden;
+}
+
+/* =========================
+   CONFETI
+========================= */
+
+.confetti{
+  position:fixed;
+  width:10px;
+  height:10px;
+  top:-20px;
+  z-index:50;
+  pointer-events:none;
+  animation:caer linear infinite;
+}
+
+.c1{left:5%;background:#ffd21c;animation-duration:6s}
+.c2{left:15%;background:#e53935;animation-duration:8s}
+.c3{left:27%;background:#0754a6;animation-duration:7s}
+.c4{left:39%;background:white;animation-duration:9s}
+.c5{left:53%;background:#ffd21c;animation-duration:6.5s}
+.c6{left:67%;background:#e53935;animation-duration:8.5s}
+.c7{left:78%;background:#0754a6;animation-duration:7.5s}
+.c8{left:91%;background:white;animation-duration:9.5s}
+
+@keyframes caer{
+  0%{
+    transform:translateY(-20px) rotate(0deg);
+  }
+  100%{
+    transform:translateY(110vh) rotate(720deg);
+  }
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:35px 15px;
+  background:
+    linear-gradient(
+      rgba(17,130,60,.78),
+      rgba(17,130,60,.88)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #31994e 0,
+      #31994e 90px,
+      #278c45 90px,
+      #278c45 180px
+    );
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:90%;
+  height:80%;
+  border:5px solid rgba(255,255,255,.8);
+  border-radius:35px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:min(900px,95%);
+  background:#fffdf1;
+  border:6px solid white;
+  border-radius:40px;
+  padding:35px 20px 40px;
+  text-align:center;
+  box-shadow:0 25px 60px #0006;
+}
+
+.ball{
+  font-size:70px;
+  animation:rebote 1.8s infinite ease-in-out;
+}
+
+@keyframes rebote{
+  0%,100%{
+    transform:translateY(0) rotate(0);
+  }
+  50%{
+    transform:translateY(-18px) rotate(12deg);
+  }
+}
+
+/* casita roja */
+
+.doghouse{
+  width:190px;
+  height:115px;
+  background:#e53935;
+  margin:15px auto 5px;
+  position:relative;
+  border:5px solid #17351e;
+  border-radius:12px 12px 5px 5px;
+  animation:flotar 3s infinite ease-in-out;
+}
+
+.doghouse::before{
+  content:"";
+  position:absolute;
+  left:-12px;
+  top:-75px;
+  width:205px;
+  height:100px;
+  background:#d62828;
+  border:5px solid #17351e;
+  transform:skewY(-28deg);
+  border-radius:15px 15px 0 0;
+}
+
+.doghouse::after{
+  content:"";
+  position:absolute;
+  width:55px;
+  height:65px;
+  bottom:-5px;
+  left:65px;
+  background:#8f241e;
+  border:4px solid #17351e;
+  border-radius:50px 50px 0 0;
+}
+
+@keyframes flotar{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
+
+.snoopy-placeholder{
+  position:absolute;
+  top:-55px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:65px;
+  z-index:3;
+}
+
+.small-title{
+  margin-top:25px;
+  color:#0754a6;
+  font-size:20px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+h1{
+  font-size:clamp(45px,9vw,88px);
+  line-height:.9;
+  margin:15px 0;
+  color:#0754a6;
+  text-shadow:4px 4px 0 #ffd21c;
+}
+
+.name{
+  color:#e53935;
+}
+
+.age{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:115px;
+  height:115px;
+  margin:20px auto;
+  background:#ffd21c;
+  border:7px solid #0754a6;
+  border-radius:50%;
+  font-size:65px;
+  font-weight:900;
+  color:#e53935;
+  animation:pulso 1.5s infinite;
+}
+
+@keyframes pulso{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
+
+.hero-text{
+  font-size:21px;
+  line-height:1.5;
+  font-weight:800;
+}
+
+.button{
+  display:inline-block;
+  margin:20px 6px 0;
+  padding:15px 24px;
+  background:#0754a6;
+  color:white;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:900;
+  box-shadow:0 6px 0 #04366e;
+  transition:.2s;
+}
+
+.button:hover{
+  transform:translateY(4px);
+  box-shadow:0 2px 0 #04366e;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+section{
+  padding:70px 18px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-title{
+ 
