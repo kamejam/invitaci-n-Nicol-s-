@@ -126,13 +126,13 @@ body{
 }
 
 /* =========================
-   SNOOPY Y CASITA ROJA
+   SNOOPY Y CASITA ROJA (PC)
 ========================= */
 
 .snoopy-wrapper{
   position:relative;
-  width:180px;
-  margin:25px auto 15px;
+  width:140px;
+  margin:15px auto 10px;
   animation:flotar 3s infinite ease-in-out;
 }
 
@@ -144,46 +144,46 @@ body{
 .snoopy-img{
   position:relative;
   z-index:5;
-  width:95px;
+  width:70px;
   height:auto;
   display:block;
-  margin:0 auto -25px;
+  margin:0 auto -18px;
 }
 
 .doghouse{
-  width:180px;
-  height:100px;
+  width:140px;
+  height:75px;
   background:#e53935;
   margin:0 auto;
   position:relative;
-  border:5px solid #17351e;
-  border-radius:12px 12px 5px 5px;
+  border:4px solid #17351e;
+  border-radius:10px 10px 4px 4px;
 }
 
 .doghouse::before{
   content:"";
   position:absolute;
-  left:-12px;
-  top:-65px;
-  width:195px;
-  height:90px;
+  left:-10px;
+  top:-50px;
+  width:152px;
+  height:70px;
   background:#d62828;
-  border:5px solid #17351e;
+  border:4px solid #17351e;
   transform:skewY(-28deg);
-  border-radius:15px 15px 0 0;
+  border-radius:12px 12px 0 0;
   z-index:1;
 }
 
 .doghouse::after{
   content:"";
   position:absolute;
-  width:50px;
-  height:55px;
-  bottom:-5px;
-  left:60px;
+  width:38px;
+  height:42px;
+  bottom:-4px;
+  left:46px;
   background:#8f241e;
-  border:4px solid #17351e;
-  border-radius:50px 50px 0 0;
+  border:3px solid #17351e;
+  border-radius:40px 40px 0 0;
   z-index:2;
 }
 
@@ -626,13 +626,13 @@ footer strong{
 }
 
 /* =========================
-   CELULAR
+   AJUSTES CELULAR (MÓVIL)
 ========================= */
 
 @media(max-width:800px){
 
   .hero-content{
-    padding:25px 15px 30px;
+    padding:20px 15px 25px;
   }
 
   .cards{
@@ -656,48 +656,45 @@ footer strong{
 @media(max-width:500px){
 
   section{
-    padding:50px 14px;
+    padding:40px 12px;
   }
 
-  .cards{
-    grid-template-columns:1fr;
+  .ball{
+    font-size:50px;
   }
 
-  .hero{
-    min-height:100vh;
+  .small-title{
+    font-size:16px;
+    margin-top:10px;
   }
 
-  .hero::before{
-    width:94%;
-    height:90%;
-  }
-
+  /* Snoopy compacto para pantalla de celular */
   .snoopy-wrapper{
-    width:150px;
-    margin:15px auto 10px;
+    width:110px;
+    margin:10px auto 5px;
   }
 
   .snoopy-img{
-    width:75px;
-    margin-bottom:-20px;
+    width:50px;
+    margin-bottom:-12px;
   }
 
   .doghouse{
-    width:150px;
-    height:85px;
+    width:110px;
+    height:60px;
   }
 
   .doghouse::before{
-    width:165px;
-    height:75px;
-    top:-55px;
-    left:-10px;
+    width:120px;
+    height:55px;
+    top:-40px;
+    left:-8px;
   }
 
   .doghouse::after{
-    width:40px;
-    height:45px;
-    left:50px;
+    width:30px;
+    height:32px;
+    left:36px;
   }
 
   .timer{
@@ -705,15 +702,15 @@ footer strong{
   }
 
   .time{
-    padding:15px 5px;
+    padding:12px 5px;
   }
 
   .time b{
-    font-size:32px;
+    font-size:28px;
   }
 
   .field-ball{
-    font-size:50px;
+    font-size:45px;
   }
 
 }
