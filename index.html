@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>¡Invitación al Cumpleaños de Nicolás Orozco! ⚽🎂</title>
 
-<!-- Fuente Infantil y Deportiva de Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
@@ -13,106 +12,49 @@
 <style>
 :root {
   --verde-campo: #138841;
-  --verde-oscuro: #0a4f24;
   --azul-champions: #0052cc;
   --rojo-pasion: #ff2a4b;
   --amarillo-gol: #ffcc00;
-  --blanco: #ffffff;
   --texto: #1a2e22;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
 
 body{
   font-family: 'Fredoka', sans-serif;
-  color: var(--texto);
   overflow-x:hidden;
-  
-  /* ESTADIO DE FONDO EN TODA LA PÁGINA */
   background-image: 
     linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%),
     url('https://i.ibb.co/7J8p3cYK/estadio-futbol-puesta-sol-campo-verde-lineas-blancas-23-2151976034.jpg');
-  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* =========================
-   CONFETI ANIMADO
-========================= */
-
-.confetti{
-  position:fixed;
-  width:12px;
-  height:12px;
-  top:-20px;
-  z-index:50;
-  pointer-events:none;
-  border-radius:3px;
-  animation:caer linear infinite;
-}
-
-.c1{left:5%;background:var(--amarillo-gol);animation-duration:5s}
-.c2{left:18%;background:var(--rojo-pasion);animation-duration:7s}
-.c3{left:32%;background:var(--azul-champions);animation-duration:6s}
-.c4{left:48%;background:white;animation-duration:8s}
-.c5{left:62%;background:var(--amarillo-gol);animation-duration:5.5s}
-.c6{left:75%;background:var(--rojo-pasion);animation-duration:7.5s}
-.c7{left:88%;background:var(--azul-champions);animation-duration:6.5s}
-
-@keyframes caer{
-  0%{ transform:translateY(-20px) rotate(0deg); opacity: 1; }
-  100%{ transform:translateY(105vh) rotate(720deg); opacity: 0; }
-}
-
-/* =========================
-   PORTADA DE IMPACTO (HERO)
-========================= */
-
 .hero{
   min-height:100vh;
-  position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
   padding:30px 15px;
-  /* El fondo ya está en el body, aquí lo dejamos transparente */
-  background: transparent;
 }
 
 .hero-content{
   position:relative;
   z-index:2;
   width:min(850px,95%);
-  background: rgba(255, 255, 255, 0.95); /* Fondo blanco translúcido */
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border: 6px solid var(--amarillo-gol);
   border-radius: 40px;
   padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,204,0,0.2);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-.ball-header {
-  font-size: 60px;
-  display: inline-block;
-  animation: girarBalon 4s infinite linear;
-}
-
-@keyframes girarBalon {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(180deg); }
-  100% { transform: translateY(0) rotate(360deg); }
-}
+.ball-header { font-size: 60px; margin-bottom: 10px; display:inline-block; }
 
 .badge-tag {
   display: inline-block;
@@ -120,296 +62,52 @@ body{
   color: white;
   padding: 8px 22px;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  box-shadow: 0 4px 12px rgba(0,82,204,0.3);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-/* SNOOPY ORIGINAL SILUETA (SVG) */
-
-.snoopy-wrapper{
-  position:relative;
-  width:160px;
-  margin:15px auto 5px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+/* --- ESTILO PARA LA IMAGEN REAL DE SNOOPY --- */
+.snoopy-container {
+  width: 180px; /* Ancho de la imagen */
+  margin: 0 auto 20px; /* Centrado */
 }
 
-.snoopy-svg{
-  width:100%;
-  height:auto;
-  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
-  animation: flotar 3s infinite ease-in-out;
-}
-
-@keyframes flotar{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
+.snoopy-img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.3)); /* Sombra para que resalte */
 }
 
 h1{
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(48px, 10vw, 85px);
+  font-size: clamp(45px, 9vw, 80px);
   font-weight: 900;
   line-height: 0.95;
-  margin: 15px 0 10px;
   color: var(--azul-champions);
   text-transform: uppercase;
   text-shadow: 3px 3px 0px var(--amarillo-gol);
 }
 
-.name{
-  color: var(--rojo-pasion);
-  text-shadow: 3px 3px 0px var(--texto);
-}
+.name{ color: var(--rojo-pasion); text-shadow: 3px 3px 0px var(--texto); }
 
-/* NÚMERO 8 TIPO CAMISETA DE FÚTBOL */
 .age-badge {
-  position: relative;
-  width: 90px;
-  height: 90px;
-  margin: 15px auto;
+  width: 85px; height: 85px; margin: 15px auto;
   background: linear-gradient(135deg, var(--amarillo-gol), #ff9900);
-  border: 5px solid var(--azul-champions);
+  border: 4px solid var(--azul-champions);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Outfit', sans-serif;
-  font-size: 55px;
-  font-weight: 900;
-  color: var(--azul-champions);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  animation: latido 1.8s infinite;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Outfit', sans-serif; font-size: 50px; font-weight: 900;
+  color: var(--azul-champions); box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-@keyframes latido {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-}
-
-.hero-text{
-  font-size: 20px;
-  line-height: 1.5;
-  font-weight: 600;
-  color: #2c4235;
-  margin-top: 10px;
-}
-
-/* BOTONES ESTILO GAMER/DEPORTIVO */
-.button{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 25px;
-  padding: 16px 32px;
-  background: linear-gradient(180deg, #0066ff 0%, #0044cc 100%);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: 700;
-  box-shadow: 0 8px 0 #002b80, 0 15px 25px rgba(0,82,204,0.4);
-  transition: all 0.2s ease;
-}
-
-.button:hover{
-  transform: translateY(4px);
-  box-shadow: 0 4px 0 #002b80, 0 8px 15px rgba(0,82,204,0.4);
-}
-
-/* =========================
-   SECCIONES Y TARJETAS
-========================= */
-
-section{
-  padding: 60px 20px;
-  /* Fondo transparente para ver el estadio del body */
-  background: transparent;
-}
-
-.container{
-  max-width: 1050px;
-  margin: auto;
-}
-
-.section-title{
-  font-family: 'Outfit', sans-serif;
-  text-align: center;
-  font-size: clamp(30px, 6vw, 48px);
-  font-weight: 900;
-  color: white;
-  text-shadow: 3px 3px 0px rgba(0,0,0,0.7); /* Sombra más fuerte para leer sobre el estadio */
-  margin-bottom: 35px;
-}
-
-/* MENSAJE */
-.message-box{
-  background: rgba(255, 255, 255, 0.96); /* Fondo blanco translúcido */
-  border-radius: 30px;
-  padding: 35px 25px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-  border-bottom: 8px solid var(--amarillo-gol);
-}
-
-.message-box p{
-  font-size: 20px;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* TARJETAS DE INFORMACIÓN */
-.cards{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card{
-  background: rgba(255, 255, 255, 0.96); /* Fondo blanco translúcido */
-  border-radius: 24px;
-  padding: 28px 20px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  border: 3px solid transparent;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.card:hover{
-  transform: translateY(-10px);
-}
-
-.card:nth-child(1){ border-color: var(--amarillo-gol); }
-.card:nth-child(2){ border-color: var(--azul-champions); }
-.card:nth-child(3){ border-color: var(--verde-campo); }
-
-.icon-box {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 15px;
-  background: #f0f4f8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px;
-}
-
-.card h3{
-  font-family: 'Outfit', sans-serif;
-  color: var(--azul-champions);
-  font-size: 22px;
-  margin-bottom: 8px;
-}
-
-.card p{
-  font-size: 17px;
-  font-weight: 600;
-  color: #444;
-}
-
-/* CUENTA REGRESIVA */
-.count-section{
-  /* Degradado sutil para destacar sobre el fondo */
-  background: linear-gradient(135deg, rgba(6,57,128,0.9) 0%, rgba(0,31,77,0.95) 100%);
-  border-radius: 40px;
-  margin: 20px auto;
-  padding: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-}
-
-.countdown{
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border: 2px solid rgba(255,255,255,0.2);
-  border-radius: 30px;
-  padding: 30px 20px;
-}
-
-.count-title{
-  text-align: center;
-  color: var(--amarillo-gol);
-  font-family: 'Outfit', sans-serif;
-  font-size: 26px;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-.timer{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-.time{
-  background: rgba(255, 255, 255, 0.98);
-  border-radius: 20px;
-  padding: 15px 5px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.time b{
-  display: block;
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(28px, 5vw, 48px);
-  color: var(--azul-champions);
-  line-height: 1;
-}
-
-.time span{
-  font-size: 12px;
-  font-weight: 700;
-  color: #666;
-  text-transform: uppercase;
-}
-
-/* UBICACION */
-.location-box{
-  background: rgba(255, 255, 255, 0.96); /* Fondo blanco translúcido */
-  border-radius: 30px;
-  padding: 35px 20px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-}
-
-/* FOOTER */
-footer{
-  background: rgba(4,18,8,0.9); /* Fondo oscuro translúcido */
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
-  font-size: 16px;
-}
-
-/* AJUSTES MÓVIL */
-@media(max-width: 600px){
-  .timer { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .hero-content { padding: 30px 15px; }
-  .badge-tag { font-size: 13px; }
-  .snoopy-wrapper { width: 130px; }
-}
+.hero-text{ font-size: 19px; line-height: 1.5; font-weight: 600; color: #333; margin-top: 15px;}
 </style>
 </head>
-
 <body>
 
-<!-- CONFETI DE BIENVENIDA -->
-<div class="confetti c1"></div>
-<div class="confetti c2"></div>
-<div class="confetti c3"></div>
-<div class="confetti c4"></div>
-<div class="confetti c5"></div>
-<div class="confetti c6"></div>
-<div class="confetti c7"></div>
-
-<!-- PORTADA PRINCIPAL -->
-<header class="hero" id="inicio">
+<header class="hero">
   <div class="hero-content">
     
     <div class="ball-header">⚽</div>
@@ -418,17 +116,9 @@ footer{
       <span class="badge-tag">¡Estás invitado al partido!</span>
     </div>
 
-    <!-- SNOOPY ORIGINAL SILUETA (DIBUJADO POR CÓDIGO) -->
-    <div class="snoopy-wrapper">
-      <svg class="snoopy-svg" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
-        <!-- Casa roja -->
-        <rect x="20" y="70" width="60" height="40" fill="#ff2a4b" stroke="#1a2e22" stroke-width="2"/>
-        <polygon points="15,70 85,70 50,45" fill="#d61c38" stroke="#1a2e22" stroke-width="2"/>
-        <!-- Snoopy silueta blanca -->
-        <ellipse cx="50" cy="40" rx="15" ry="18" fill="#ffffff" stroke="#1a2e22" stroke-width="2"/>
-        <ellipse cx="50" cy="55" rx="10" ry="12" fill="#ffffff" stroke="#1a2e22" stroke-width="2"/>
-        <ellipse cx="62" cy="40" rx="3" ry="7" fill="#1a2e22"/> <!-- Oreja -->
-      </svg>
+    <!-- === AQUÍ ESTÁ LA IMAGEN REAL Y CLÁSICA DE SNOOPY === -->
+    <div class="snoopy-container">
+      <img src="https://i.ibb.co/2vX33mS/snoopy-house.png" alt="Snoopy en su casita" class="snoopy-img">
     </div>
 
     <h1>Nicolás<br><span class="name">Orozco</span></h1>
@@ -439,121 +129,8 @@ footer{
       🎉 ¡Prepara tus tenis! Vamos a celebrar un cumpleaños lleno de goles, juegos y mucha diversión. 🎉
     </p>
 
-    <a href="#datos" class="button">
-      ⚽ Ver Detalles del Partido
-    </a>
-
   </div>
 </header>
-
-<!-- MENSAJE -->
-<section>
-  <div class="container">
-    <div class="message-box">
-      <h2 style="font-family:'Outfit'; color: var(--azul-champions); font-size: 32px; margin-bottom: 15px;">
-        🏆 ¡Un Cumpleaños de Campeonato!
-      </h2>
-      <p>
-        Hay un partido muy especial que está a punto de comenzar...<br>
-        <strong>¡Nicolás Orozco cumple 8 años!</strong><br><br>
-        Queremos que formes parte de nuestro equipo para disfrutar de una tarde inolvidable en la cancha. ¡Snoopy ya tiene el balón listo!
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- INFORMACIÓN TIPO TARJETAS (SIN REGALO) -->
-<section id="datos">
-  <div class="container">
-    <h2 class="section-title">📋 Ficha del Partido</h2>
-    
-    <div class="cards">
-      <div class="card">
-        <div class="icon-box">📅</div>
-        <h3>Fecha</h3>
-        <p>Sábado<br>29 de Agosto, 2026</p>
-      </div>
-
-      <div class="card">
-        <div class="icon-box">⏰</div>
-        <h3>Hora</h3>
-        <p>3:00 PM<br>(¡Puntualidad silbato inicial!)</p>
-      </div>
-
-      <div class="card">
-        <div class="icon-box">👟</div>
-        <h3>Uniforme</h3>
-        <p>Ropa Deportiva +<br>Tenis cómodos</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CUENTA REGRESIVA -->
-<section>
-  <div class="container">
-    <div class="count-section">
-      <div class="countdown">
-        <div class="count-title">⏳ Tiempo restante para el pitazo inicial:</div>
-        <div class="timer">
-          <div class="time"><b id="days">0</b><span>Días</span></div>
-          <div class="time"><b id="hours">0</b><span>Horas</span></div>
-          <div class="time"><b id="minutes">0</b><span>Min.</span></div>
-          <div class="time"><b id="seconds">0</b><span>Seg.</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- UBICACIÓN -->
-<section>
-  <div class="container">
-    <h2 class="section-title">📍 Estadio de Celebración</h2>
-    <div class="location-box">
-      <h3 style="font-family:'Outfit'; color: var(--rojo-pasion); font-size: 28px; margin-bottom: 10px;">
-        🏟️ Cancha Sintética Brasileirao
-      </h3>
-      <p style="font-size: 19px; font-weight: 600; color: #555; margin-bottom: 20px;">
-        Cra. 46 #76-109 · Nte. Centro Histórico<br>Barranquilla, Atlántico
-      </p>
-      <a class="button" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cancha%20Sint%C3%A9tica%20Brasileirao%2C%20Cra.%2046%20%2376-109%2C%20Barranquilla%2C%20Atl%C3%A1ntico">
-        🗺️ Ver Ubicación en GPS
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p style="font-size: 20px; font-weight: 700; margin-bottom: 5px;">¡Te esperamos para hacer un Golazo! ⚽</p>
-  <p style="opacity: 0.8;">Nicolás Orozco · 8 Años</p>
-</footer>
-
-<!-- SCRIPT CUENTA REGRESIVA -->
-<script>
-const fechaFiesta = new Date("2026-08-29T15:00:00-05:00").getTime();
-
-function actualizar(){
-  const ahora = Date.now();
-  let diferencia = fechaFiesta - ahora;
-
-  if(diferencia < 0) diferencia = 0;
-
-  const dias = Math.floor(diferencia / 86400000);
-  const horas = Math.floor((diferencia % 86400000) / 3600000);
-  const minutos = Math.floor((diferencia % 3600000) / 60000);
-  const segundos = Math.floor((diferencia % 60000) / 1000);
-
-  document.getElementById("days").textContent = dias;
-  document.getElementById("hours").textContent = horas;
-  document.getElementById("minutes").textContent = minutos;
-  document.getElementById("seconds").textContent = segundos;
-}
-
-actualizar();
-setInterval(actualizar, 1000);
-</script>
 
 </body>
 </html>
