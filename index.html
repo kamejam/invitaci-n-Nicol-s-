@@ -34,7 +34,7 @@ html{
 
 body{
   font-family: 'Fredoka', sans-serif;
-  background-color: var(--verde-oscuro);
+  background-color: #061a0e;
   color: var(--texto);
   overflow-x:hidden;
 }
@@ -68,7 +68,7 @@ body{
 }
 
 /* =========================
-   PORTADA CON FONDO DE ESTADIO REAL
+   PORTADA CON FONDO DE CÉSPED Y LUCES DE ESTADIO
 ========================= */
 
 .hero{
@@ -78,23 +78,25 @@ body{
   align-items:center;
   justify-content:center;
   padding:30px 15px;
-  /* Imagen de estadio real con capa oscura elegante */
+  /* Fondo realista con césped artificial, sombra y reflectores */
   background: 
-    linear-gradient(180deg, rgba(10, 30, 15, 0.6) 0%, rgba(5, 20, 10, 0.85) 100%),
-    url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    radial-gradient(circle at 50% 20%, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.75) 80%),
+    repeating-linear-gradient(0deg, #105929 0px, #105929 25px, #0b451f 25px, #0b451f 50px);
+  background-blend-mode: overlay, normal;
+  border-bottom: 8px solid var(--amarillo-gol);
 }
 
 .hero-content{
   position:relative;
   z-index:2;
   width:min(850px,95%);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   border: 6px solid var(--amarillo-gol);
   border-radius: 40px;
   padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.6), inset 0 0 20px rgba(255,204,0,0.2);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7), inset 0 0 20px rgba(255,204,0,0.2);
 }
 
 .ball-header {
@@ -123,28 +125,27 @@ body{
   margin-bottom: 10px;
 }
 
-/* SNOOPY PATEANDO EL BALÓN */
+/* SNOOPY PATEANDO EL BALÓN (ILUSTRACIÓN SVG INCLUIDA) */
 
 .snoopy-wrapper{
   position:relative;
   width:180px;
   margin:15px auto 10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.snoopy-img{
-  position:relative;
-  z-index:5;
-  width:150px;
+.snoopy-svg{
+  width:160px;
   height:auto;
-  display:block;
-  margin:0 auto;
-  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.3));
-  animation: patear 2.5s infinite ease-in-out;
+  filter: drop-shadow(0 8px 10px rgba(0,0,0,0.25));
+  animation: patear 2s infinite ease-in-out;
 }
 
 @keyframes patear{
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-6px) rotate(-3deg); }
+  50% { transform: translateY(-8px) rotate(-4deg); }
 }
 
 h1{
@@ -441,7 +442,7 @@ section{
 
 /* FOOTER */
 footer{
-  background: #062412;
+  background: #041208;
   color: white;
   text-align: center;
   padding: 30px 15px;
@@ -453,7 +454,7 @@ footer{
   .timer { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .hero-content { padding: 30px 15px; }
   .badge-tag { font-size: 13px; }
-  .snoopy-img { width: 120px; }
+  .snoopy-svg { width: 130px; }
 }
 </style>
 </head>
@@ -469,7 +470,7 @@ footer{
 <div class="confetti c6"></div>
 <div class="confetti c7"></div>
 
-<!-- PORTADA PRINCIPAL (CON FONDO DE ESTADIO REAL) -->
+<!-- PORTADA PRINCIPAL -->
 <header class="hero" id="inicio">
   <div class="hero-content">
     
@@ -481,7 +482,44 @@ footer{
 
     <!-- SNOOPY PATEANDO EL BALÓN -->
     <div class="snoopy-wrapper">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Snoopy_Peanuts.png" alt="Snoopy Jugando Fútbol" class="snoopy-img">
+      <svg class="snoopy-svg" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- Balón en movimiento -->
+        <g transform="translate(155, 115)">
+          <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#111" stroke-width="2.5"/>
+          <polygon points="0,-12 9,-5 6,6 -6,6 -9,-5" fill="#111"/>
+          <path d="M0,-12 L0,-18 M9,-5 L15,-8 M6,6 L12,12 M-6,6 L-12,12 M-9,-5 L-15,-8" stroke="#111" stroke-width="2"/>
+          <!-- Rayas de efecto de tiro -->
+          <path d="M-28,-8 L-20,-4 M-26,4 L-18,2 M-25,12 L-18,8" stroke="#ff2a4b" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        
+        <!-- Snoopy Jugando -->
+        <!-- Oreja -->
+        <ellipse cx="62" cy="52" rx="14" ry="24" fill="#111111" transform="rotate(-15 62 52)"/>
+        <!-- Cabeza -->
+        <path d="M 50 60 C 30 50, 35 25, 65 25 C 85 25, 100 40, 95 55 C 90 70, 65 70, 50 60 Z" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+        <!-- Nariz -->
+        <ellipse cx="94" cy="46" rx="6" ry="5" fill="#111111"/>
+        <!-- Ojo sonriente -->
+        <path d="M 72 38 Q 77 34 82 38" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
+        <!-- Boca feliz -->
+        <path d="M 75 52 Q 83 58 88 50" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+        
+        <!-- Cuerpo encendido/inclinado hacia atrás -->
+        <path d="M 55 60 C 45 75, 45 95, 60 110 C 70 110, 80 95, 75 70 Z" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+        <!-- Camiseta Roja de fútbol -->
+        <path d="M 54 65 C 48 78, 50 92, 62 98 C 72 96, 76 82, 73 68 Z" fill="#ff2a4b" stroke="#111111" stroke-width="2.5"/>
+        
+        <!-- Brazo apoyado / balanceo -->
+        <path d="M 50 72 C 35 75, 30 85, 38 90 C 42 90, 48 82, 52 78" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+        
+        <!-- Pierna izquierda (apoyo) -->
+        <path d="M 58 105 L 52 130 L 40 132 C 36 132, 36 140, 44 140 L 60 140 C 65 140, 66 130, 64 120 Z" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+        <ellipse cx="48" cy="136" rx="10" ry="5" fill="#0052cc"/> <!-- Tenis azul -->
+        
+        <!-- Pierna derecha (¡Pateando fuerte!) -->
+        <path d="M 70 100 Q 95 110, 132 118 C 138 119, 140 110, 132 105 Q 98 100, 72 92 Z" fill="#ffffff" stroke="#111111" stroke-width="3"/>
+        <ellipse cx="132" cy="112" rx="11" ry="6" fill="#0052cc" transform="rotate(-10 132 112)"/> <!-- Tenis pateando -->
+      </svg>
     </div>
 
     <h1>Nicolás<br><span class="name">Orozco</span></h1>
