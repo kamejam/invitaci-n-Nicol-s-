@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¡Nicolás cumple 8! ⚽🎂</title>
-
 <style>
 *{
   box-sizing:border-box;
@@ -116,13 +109,13 @@ body{
   }
 }
 
-/* Casita roja de Snoopy */
+/* Casita roja de Snoopy ajustada */
 
 .doghouse{
-  width:190px;
-  height:115px;
+  width:180px;
+  height:100px;
   background:#e53935;
-  margin:80px auto 15px; /* Margen superior para dar espacio a Snoopy */
+  margin:75px auto 15px; /* Espacio superior reservado para Snoopy */
   position:relative;
   border:5px solid #17351e;
   border-radius:12px 12px 5px 5px;
@@ -133,9 +126,9 @@ body{
   content:"";
   position:absolute;
   left:-12px;
-  top:-75px;
-  width:205px;
-  height:100px;
+  top:-65px;
+  width:195px;
+  height:90px;
   background:#d62828;
   border:5px solid #17351e;
   transform:skewY(-28deg);
@@ -145,10 +138,10 @@ body{
 .doghouse::after{
   content:"";
   position:absolute;
-  width:55px;
-  height:65px;
+  width:50px;
+  height:55px;
   bottom:-5px;
-  left:65px;
+  left:60px;
   background:#8f241e;
   border:4px solid #17351e;
   border-radius:50px 50px 0 0;
@@ -159,19 +152,19 @@ body{
   50%{transform:translateY(-7px)}
 }
 
-/* Imagen de Snoopy 3D */
+/* Imagen de Snoopy ajustada */
 .snoopy-img{
   position:absolute;
-  top:-110px;
+  top:-80px;
   left:50%;
   transform:translateX(-50%);
-  width:120px;
+  width:95px;
   height:auto;
   z-index:5;
 }
 
 .small-title{
-  margin-top:25px;
+  margin-top:15px;
   color:#0754a6;
   font-size:20px;
   font-weight:900;
@@ -180,9 +173,9 @@ body{
 }
 
 h1{
-  font-size:clamp(45px,9vw,88px);
-  line-height:.9;
-  margin:15px 0;
+  font-size:clamp(40px,8vw,80px);
+  line-height:1;
+  margin:20px 0 15px;
   color:#0754a6;
   text-shadow:4px 4px 0 #ffd21c;
 }
@@ -618,7 +611,7 @@ footer strong{
 }
 
 /* =========================
-   CELULAR
+   ADAPTACIÓN CELULAR
 ========================= */
 
 @media(max-width:800px){
@@ -665,7 +658,27 @@ footer strong{
   }
 
   .doghouse{
-    transform:scale(.8);
+    width:150px;
+    height:85px;
+    margin:60px auto 10px;
+  }
+
+  .doghouse::before{
+    width:165px;
+    height:75px;
+    top:-55px;
+    left:-10px;
+  }
+
+  .doghouse::after{
+    width:40px;
+    height:45px;
+    left:50px;
+  }
+
+  .snoopy-img{
+    top:-65px;
+    width:75px;
   }
 
   .timer{
@@ -704,537 +717,4 @@ footer strong{
     transform:translateY(0);
   }
 }
-
 </style>
-</head>
-
-<body>
-
-<!-- CONFETI -->
-<div class="confetti c1"></div>
-<div class="confetti c2"></div>
-<div class="confetti c3"></div>
-<div class="confetti c4"></div>
-<div class="confetti c5"></div>
-<div class="confetti c6"></div>
-<div class="confetti c7"></div>
-<div class="confetti c8"></div>
-
-
-<!-- PORTADA -->
-
-<header class="hero" id="inicio">
-
-<div class="hero-content">
-
-<div class="ball">⚽</div>
-
-<div class="small-title">
-¡Estás invitado!
-</div>
-
-<!-- CASITA CON SNOOPY 3D -->
-<div class="doghouse">
-  <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Snoopy_Peanuts.png" alt="Snoopy 3D" class="snoopy-img">
-</div>
-
-<h1>
-Nicolás
-<br>
-<span class="name">Orozco</span>
-</h1>
-
-<div class="age">
-8
-</div>
-
-<p class="hero-text">
-🎉 ¡Vamos a celebrar un cumpleaños
-lleno de fútbol, juegos y diversión! 🎉
-</p>
-
-<a href="#datos" class="button">
-⚽ Ver invitación
-</a>
-
-</div>
-
-</header>
-
-
-<!-- MENSAJE -->
-
-<section class="message">
-
-<div class="container">
-
-<h2 class="section-title">
-🎂 ¡Nicolás cumple 8 años!
-</h2>
-
-<div class="message-box">
-
-<div class="big-ball">
-⚽
-</div>
-
-<p>
-Hay un cumpleaños muy especial
-que está a punto de comenzar...
-<br><br>
-
-<strong>
-¡Nicolás Orozco cumple 8 años!
-</strong>
-
-<br><br>
-
-Y quiere celebrarlo contigo
-en una tarde llena de fútbol,
-amigos, juegos y mucha diversión.
-<br><br>
-
-⚽ 
-<strong>
-¡Snoopy también está listo para el partido!
-</strong>
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- DATOS -->
-
-<section class="info" id="datos">
-
-<div class="container">
-
-<h2 class="section-title">
-📋 La información de la fiesta
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="icon">
-📅
-</div>
-
-<h3>
-Fecha
-</h3>
-
-<p>
-<strong>
-Sábado 29 de agosto de 2026
-</strong>
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">
-🕒
-</div>
-
-<h3>
-Hora
-</h3>
-
-<p>
-<strong>
-3:00 de la tarde
-</strong>
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">
-🎁
-</div>
-
-<h3>
-Regalo
-</h3>
-
-<p>
-<strong>
-Regalo normal
-</strong>
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">
-👟
-</div>
-
-<h3>
-Importante
-</h3>
-
-<p>
-<strong>
-Llevar ropa deportiva
-</strong>
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CUENTA REGRESIVA -->
-
-<section class="count-section">
-
-<div class="container">
-
-<h2 class="section-title">
-⏳ ¡La cuenta regresiva!
-</h2>
-
-<div class="countdown">
-
-<div class="count-title">
-⚽ Cada vez falta menos ⚽
-</div>
-
-<div class="timer">
-
-<div class="time">
-<b id="days">0</b>
-<span>DÍAS</span>
-</div>
-
-<div class="time">
-<b id="hours">0</b>
-<span>HORAS</span>
-</div>
-
-<div class="time">
-<b id="minutes">0</b>
-<span>MINUTOS</span>
-</div>
-
-<div class="time">
-<b id="seconds">0</b>
-<span>SEGUNDOS</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FIESTA -->
-
-<section class="party">
-
-<div class="container">
-
-<h2 class="section-title">
-🎉 ¿Qué nos espera?
-</h2>
-
-<div class="party-grid">
-
-<div class="party-card">
-
-<h3>
-⚽ ¡A jugar!
-</h3>
-
-<div class="party-list">
-
-<div class="party-item">
-⚽ Fútbol y juegos
-</div>
-
-<div class="party-item">
-🏆 Retos y sorpresas
-</div>
-
-<div class="party-item">
-🎵 Música
-</div>
-
-<div class="party-item">
-🎂 Cumpleaños
-</div>
-
-<div class="party-item">
-🎉 Muchísima diversión
-</div>
-
-</div>
-
-</div>
-
-
-<div class="party-card">
-
-<h3>
-👟 Dress code
-</h3>
-
-<p style="font-size:20px;line-height:1.7;font-weight:800">
-
-Ven con ropa deportiva
-y tenis cómodos.
-
-<br><br>
-
-🌱 Vamos a disfrutar de la
-cancha sintética.
-
-<br><br>
-
-⚽ ¡Así que prepárate para correr,
-jugar y divertirte!
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CANCHA -->
-
-<section class="field-section">
-
-<div class="container">
-
-<h2 class="section-title">
-🏟️ ¡Nos vemos en la cancha!
-</h2>
-
-<div class="field">
-
-<div class="center-circle"></div>
-
-<div class="field-ball">
-⚽
-</div>
-
-<div class="field-text">
-¡A JUGAR! ⚽
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- UBICACIÓN -->
-
-<section class="location">
-
-<div class="container">
-
-<h2 class="section-title">
-📍 ¿Dónde será?
-</h2>
-
-<div class="location-box">
-
-<h3>
-🏟️ Cancha Sintética Brasileirao
-</h3>
-
-<p class="address">
-
-Cra. 46 #76-109
-<br>
-
-Nte. Centro Histórico
-<br>
-
-Barranquilla, Atlántico
-
-</p>
-
-<a
-class="button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Cancha%20Sint%C3%A9tica%20Brasileirao%2C%20Cra.%2046%20%2376-109%2C%20Barranquilla%2C%20Atl%C3%A1ntico">
-
-🗺️ Abrir ubicación
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- VESTUARIO -->
-
-<section class="dress">
-
-<div class="container">
-
-<h2>
-👟 ¡No olvides tu ropa deportiva!
-</h2>
-
-<p>
-⚽ Tenis cómodos + ropa deportiva
-= ¡listo para el partido!
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FINAL -->
-
-<section class="final">
-
-<div class="final-box">
-
-<h2>
-🎉 ¡No puedes faltar!
-</h2>
-
-<p>
-Nicolás quiere celebrar sus 8 años
-contigo.
-
-<br><br>
-
-💛 💙 ❤️ 💚
-
-<br><br>
-
-¡Te esperamos para pasar
-una tarde increíble!
-</p>
-
-<a href="#inicio" class="button">
-⬆️ Volver arriba
-</a>
-
-</div>
-
-</section>
-
-
-<footer>
-
-⚽🎂
-
-<br><br>
-
-<strong>
-Nicolás Orozco · 8 años
-</strong>
-
-<br>
-
-¡Será un golazo de cumpleaños! 🎉
-
-</footer>
-
-
-<script>
-
-/* =========================
-   CUENTA REGRESIVA
-========================= */
-
-const fechaFiesta =
-new Date("2026-08-29T15:00:00-05:00").getTime();
-
-function actualizar(){
-
-const ahora = Date.now();
-
-let diferencia =
-fechaFiesta - ahora;
-
-if(diferencia < 0){
-
-diferencia = 0;
-
-}
-
-const dias =
-Math.floor(
-diferencia / 86400000
-);
-
-const horas =
-Math.floor(
-(diferencia % 86400000) /
-3600000
-);
-
-const minutos =
-Math.floor(
-(diferencia % 3600000) /
-60000
-);
-
-const segundos =
-Math.floor(
-(diferencia % 60000) /
-1000
-);
-
-document.getElementById("days")
-.textContent = dias;
-
-document.getElementById("hours")
-.textContent = horas;
-
-document.getElementById("minutes")
-.textContent = minutos;
-
-document.getElementById("seconds")
-.textContent = segundos;
-
-}
-
-actualizar();
-
-setInterval(
-actualizar,
-1000
-);
-
-</script>
-
-</body>
-</html>
