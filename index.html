@@ -5,36 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>¡Invitación al Cumpleaños de Nicolás Orozco! ⚽🎂</title>
 
+<!-- Fuente Infantil y Deportiva de Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
 
 <style>
+/* =========================
+   ESTILOS GENERALES
+========================= */
 :root {
   --verde-campo: #138841;
+  --verde-oscuro: #0a4f24;
   --azul-champions: #0052cc;
   --rojo-pasion: #ff2a4b;
   --amarillo-gol: #ffcc00;
+  --blanco: #ffffff;
   --texto: #1a2e22;
 }
 
-*{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   font-family: 'Fredoka', sans-serif;
+  color: var(--texto);
   overflow-x:hidden;
-  background-image: 
-    linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%),
-    url('https://i.ibb.co/7J8p3cYK/estadio-futbol-puesta-sol-campo-verde-lineas-blancas-23-2151976034.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* Fondo verde de franjas de estadio */
+  background: 
+    radial-gradient(circle at 50% 20%, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.7) 80%),
+    repeating-linear-gradient(0deg, #105929 0px, #105929 25px, #0b451f 25px, #0b451f 50px);
+  background-blend-mode: overlay, normal;
+  border-bottom: 8px solid var(--amarillo-gol);
 }
 
+/* =========================
+   CONFETI ANIMADO
+========================= */
+.confetti{
+  position:fixed;
+  width:12px;
+  height:12px;
+  top:-20px;
+  z-index:50;
+  pointer-events:none;
+  border-radius:3px;
+  animation:caer linear infinite;
+}
+
+.c1{left:5%;background:var(--amarillo-gol);animation-duration:5s}
+.c2{left:18%;background:var(--rojo-pasion);animation-duration:7s}
+.c3{left:32%;background:var(--azul-champions);animation-duration:6s}
+.c4{left:48%;background:white;animation-duration:8s}
+.c5{left:62%;background:var(--amarillo-gol);animation-duration:5.5s}
+.c6{left:75%;background:var(--rojo-pasion);animation-duration:7.5s}
+.c7{left:88%;background:var(--azul-champions);animation-duration:6.5s}
+
+@keyframes caer{
+  0%{ transform:translateY(-20px) rotate(0deg); opacity: 1; }
+  100%{ transform:translateY(105vh) rotate(720deg); opacity: 0; }
+}
+
+/* =========================
+   PORTADA CON TARJETA FLOTANTE (HERO)
+========================= */
 .hero{
   min-height:100vh;
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -45,16 +89,14 @@ body{
   position:relative;
   z-index:2;
   width:min(850px,95%);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border: 6px solid var(--amarillo-gol);
   border-radius: 40px;
   padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
 }
-
-.ball-header { font-size: 60px; margin-bottom: 10px; display:inline-block; }
 
 .badge-tag {
   display: inline-block;
@@ -62,64 +104,172 @@ body{
   color: white;
   padding: 8px 22px;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,82,204,0.3);
+  margin-bottom: 25px;
 }
 
-/* --- ESTILO PARA LA IMAGEN REAL DE SNOOPY --- */
-.snoopy-container {
-  width: 180px; /* Ancho de la imagen */
-  margin: 0 auto 20px; /* Centrado */
+/* =========================
+   SNOOPY PATEANDO (SVG INTEGRADO)
+========================= */
+.snoopy-wrapper{
+  position:relative;
+  width:200px;
+  margin:0 auto 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.snoopy-img {
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.3)); /* Sombra para que resalte */
+.snoopy-svg{
+  width:100%;
+  height:auto;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.25));
+  animation: patear 1.8s infinite ease-in-out;
 }
 
+@keyframes patear{
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
+}
+
+/* =========================
+   TEXTOS Y BOTONES
+========================= */
 h1{
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(45px, 9vw, 80px);
+  font-size: clamp(48px, 10vw, 85px);
   font-weight: 900;
   line-height: 0.95;
+  margin: 15px 0 10px;
   color: var(--azul-champions);
   text-transform: uppercase;
   text-shadow: 3px 3px 0px var(--amarillo-gol);
 }
 
-.name{ color: var(--rojo-pasion); text-shadow: 3px 3px 0px var(--texto); }
-
-.age-badge {
-  width: 85px; height: 85px; margin: 15px auto;
-  background: linear-gradient(135deg, var(--amarillo-gol), #ff9900);
-  border: 4px solid var(--azul-champions);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Outfit', sans-serif; font-size: 50px; font-weight: 900;
-  color: var(--azul-champions); box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.name{
+  color: var(--rojo-pasion);
+  text-shadow: 3px 3px 0px var(--texto);
 }
 
-.hero-text{ font-size: 19px; line-height: 1.5; font-weight: 600; color: #333; margin-top: 15px;}
+.age-badge {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 15px auto;
+  background: linear-gradient(135deg, var(--amarillo-gol), #ff9900);
+  border: 5px solid var(--azul-champions);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 55px;
+  font-weight: 900;
+  color: var(--azul-champions);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: latido 1.8s infinite;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.hero-text{
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #333;
+  margin-top: 15px;
+}
+
+.button{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  padding: 16px 32px;
+  background: linear-gradient(180deg, #0066ff 0%, #0044cc 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 8px 0 #002b80, 0 15px 25px rgba(0,82,204,0.4);
+}
+
+/* AJUSTES MÓVIL */
+@media(max-width: 600px){
+  .hero-content { padding: 30px 15px; }
+  .badge-tag { font-size: 13px; }
+  .snoopy-wrapper { width: 150px; }
+}
 </style>
 </head>
+
 <body>
 
-<header class="hero">
+<!-- CONFETI DE BIENVENIDA -->
+<div class="confetti c1"></div>
+<div class="confetti c2"></div>
+<div class="confetti c3"></div>
+<div class="confetti c4"></div>
+
+<!-- PORTADA PRINCIPAL -->
+<header class="hero" id="inicio">
   <div class="hero-content">
     
-    <div class="ball-header">⚽</div>
-    
     <div>
-      <span class="badge-tag">¡Estás invitado al partido!</span>
+      <span class="badge-tag">¡Estás invitado al partido! ⚽</span>
     </div>
 
-    <!-- === AQUÍ ESTÁ LA IMAGEN REAL Y CLÁSICA DE SNOOPY === -->
-    <div class="snoopy-container">
-      <img src="https://i.ibb.co/2vX33mS/snoopy-house.png" alt="Snoopy en su casita" class="snoopy-img">
+    <!-- === SNOOPY PATEANDO (SVG INTEGRADO - NO USA LINK) === -->
+    <div class="snoopy-wrapper">
+      <svg class="snoopy-svg" viewBox="0 0 338 522" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M0 0h337.8v521.8H0z"/>
+          <path id="c" d="M0 0h337.8v521.8H0z"/>
+        </defs>
+        <clipPath id="b"><use xlink:href="#a"/></clipPath>
+        <clipPath id="d"><use xlink:href="#c"/></clipPath>
+        
+        <!-- SNOOPY Y BALÓN -->
+        <g clip-path="url(#d)">
+          <!-- Balón -->
+          <g transform="translate(236.4 207.2)">
+            <ellipse cx="46.7" cy="46.7" rx="46.7" ry="46.7" fill="#fff" stroke="#000" stroke-width="6"/>
+            <path d="M46.7.2v93.2M.2 46.7h93.2" stroke="#000" stroke-width="6"/>
+          </g>
+          
+          <!-- Snoopy pateando -->
+          <g transform="translate(0 .2)">
+            <ellipse cx="64.1" cy="74.5" rx="20.4" ry="40.7" fill="#000"/> <!-- Oreja -->
+            <path d="M66.6 86.8c10 2.2 21 0 31.8-6.1 10.9-6.2 19-15.3 22-24.9" fill="none" stroke="#000" stroke-width="6"/>
+            <ellipse cx="140.2" cy="74.5" rx="93.6" ry="74.2" fill="#fff" stroke="#000" stroke-width="6"/> <!-- Cabeza -->
+            <ellipse cx="177" cy="188.7" rx="63.3" ry="51.8" fill="#fff" stroke="#000" stroke-width="6"/> <!-- Cuerpo -->
+            
+            <!-- Camiseta Roja -->
+            <path d="M118 190c-1 25.7 15 48.7 39.4 56.6 24.5 7.8 51.3 1.2 66.8-16.6" fill="#f00"/>
+            
+            <path d="M66.6 153c-1.5 28.5 13.6 55.4 38.3 67.8" fill="none" stroke="#000" stroke-width="6"/>
+            <path d="M239.1 190.4c6.3 14.3 10.4 29.5 12 45M177 240.5v80.1M138 316h78.1" fill="none" stroke="#000" stroke-width="6"/>
+            
+            <!-- Pierna pateando -->
+            <g transform="translate(142.1 240.2)">
+              <ellipse cx="15.8" cy="15.8" rx="15.8" ry="15.8" fill="#fff" stroke="#000" stroke-width="6"/>
+              <path d="M31.3 15.8h112.5" fill="none" stroke="#000" stroke-width="6"/>
+              <ellipse cx="128" cy="15.8" rx="15.8" ry="15.8" fill="#fff" stroke="#000" stroke-width="6"/>
+            </g>
+          </g>
+        </g>
+      </svg>
     </div>
+    
+    <!-- === FIN SNOOPY === -->
 
     <h1>Nicolás<br><span class="name">Orozco</span></h1>
 
@@ -128,6 +278,10 @@ h1{
     <p class="hero-text">
       🎉 ¡Prepara tus tenis! Vamos a celebrar un cumpleaños lleno de goles, juegos y mucha diversión. 🎉
     </p>
+
+    <a href="#" class="button">
+      ⚽ Ver Detalles del Partido
+    </a>
 
   </div>
 </header>
